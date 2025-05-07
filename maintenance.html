@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Halaman Sedang Dalam Perbaikan</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #0f0f0f;
+      color: #f9c700;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    img.logo {
+      width: 200px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
+      text-shadow: 0 0 10px #f9c700;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #eee;
+    }
+
+    .back-button {
+      margin-top: 30px;
+      padding: 12px 25px;
+      font-size: 1em;
+      color: #000;
+      background-color: #f9c700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #ffd700;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo PUBG -->
+  <img class="logo" src="https://pbs.twimg.com/media/GcuwNilbcAEv8ZM.jpg" alt="PUBG Logo">
+
+  <!-- Teks utama -->
+  <h1>🚧 Halaman Dalam Perbaikan 🚧</h1>
+  <p>Maaf, halaman ini sedang dalam pengembangan.<br>Silakan kembali lagi nanti.</p>
+
+  <!-- Tombol kembali -->
+  <a href="index.html" class="back-button">Kembali ke Beranda</a>
+</body>
+</html>
