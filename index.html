@@ -381,6 +381,114 @@ main {
     padding: 1rem !important;
   }
 }
+
+
+/* Global reset for better mobile layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Semua elemen utama mengikuti lebar layar */
+main, section, header, nav, footer, .hero-header, form, .gallery, .auth-buttons {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Gambar agar tidak melebar */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hero header perbaikan */
+.hero-header {
+  background-size: cover;
+  background-position: center;
+  min-height: 240px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Navigasi mobile */
+nav ul.navbar-menu {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-buttons,
+.auth-buttons input,
+.auth-buttons a,
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+h1, h2, h3, p {
+  text-align: center;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Override ukuran desktop jika dibuka di HP */
+@media (max-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  nav ul.navbar-menu {
+    display: none;
+  }
+
+  nav ul.navbar-menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .gallery img {
+    border-radius: 8px;
+  }
+
+  .form-group,
+  .auth-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  form {
+    padding: 1rem 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -523,7 +631,6 @@ main {
 </div>
 </div>
 </header>
-
 <script>
     const translations = {
       id: {
@@ -657,7 +764,6 @@ main {
     effect: 'slide',
   });
    </script>
-
 <section id="beranda">
 <h2 data-i18n="home_title">
       Beranda
