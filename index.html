@@ -567,53 +567,70 @@ h1, h2, h3, p {
 }
 
 
-/* Reset struktur navigasi utama */
+/* Struktur header desktop */
 .header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 1rem;
 }
 
-.header-logo img {
-  height: 60px;
+.header-left img.logo {
+  height: 50px;
 }
 
-.header-nav {
+.header-center {
   flex-grow: 1;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 }
 
-.header-auth {
+.header-right {
   display: flex;
+  flex-direction: row;
   gap: 0.5rem;
 }
 
-/* Tampilan mobile */
+.auth-buttons input {
+  width: 120px;
+}
+
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .header-nav .navbar-menu,
-  .header-auth {
-    display: none;
+  .header-wrapper {
+    flex-direction: row;
   }
 
-  .navbar-menu.show,
-  .menu-toggle {
+  .burger {
     display: block;
-  }
-
-  .menu-toggle {
-    font-size: 1.8rem;
-    background: none;
-    color: white;
-    border: none;
-    cursor: pointer;
     margin-left: auto;
   }
 
-  .header-wrapper {
-    justify-content: space-between;
+  .navbar-center nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .navbar-center nav.show {
+    display: flex !important;
+  }
+
+  .header-right {
+    display: none;
   }
 }
 </style>
@@ -668,9 +685,7 @@ h1, h2, h3, p {
 <div id="clock">
 </div>
 </div>
-<header><div class="header-wrapper"><div class="header-logo"><div class="logo">
-<img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/>
-</div></div><div class="header-nav"><button class="menu-toggle" onclick="toggleMenu()">☰</button><nav class="navbar">
+<header><div class="header-wrapper"><div class="header-left"><img alt="PUBG Logo" class="logo" src="images/pubg-logo.png"/></div><div class="header-center"><button class="burger" onclick="document.querySelector('.navbar-center').classList.toggle('show');">☰</button><nav class="navbar-center">
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
 <div class="forgot-password">
@@ -729,7 +744,7 @@ h1, h2, h3, p {
 </ul>
 </div>
 </div>
-</nav></div><div class="header-auth"><div class="auth-buttons">
+</nav></div><div class="header-right"><div class="auth-buttons">
 <input class="auth-input" placeholder="Username" type="text"/>
 <input class="auth-input" placeholder="Password" type="password"/>
 <a class="login-btn" href="maintenance.html">
