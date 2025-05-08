@@ -509,6 +509,77 @@ main {
     padding: 1rem !important;
   }
 }
+
+
+/* Konten responsif sepenuhnya di mobile */
+main, section, header, .hero-header, form, .gallery, .auth-buttons {
+  max-width: 100%;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-header {
+  background-size: cover;
+  background-position: center;
+  min-height: 240px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-header img,
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.auth-buttons,
+.auth-buttons input,
+.auth-buttons a,
+form input,
+form textarea,
+form button {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+h2, p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  nav ul.navbar-menu li a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+  }
+
+  .hero-header {
+    min-height: 200px;
+  }
+
+  .gallery {
+    gap: 1rem;
+  }
+
+  form {
+    gap: 1rem;
+  }
+}
 </style>
 </head>
 <body>
@@ -651,48 +722,7 @@ main {
 </div>
 </div>
 </header>
-<main>
-<section id="beranda">
-<h2 data-i18n="home_title">
-      Beranda
-     </h2>
-<p data-i18n="home_desc">
-      Website ini dibuat hanya dengan HTML dan CSS dasar.
-     </p>
-</section>
-<section id="tentang">
-<h2 data-i18n="about_title">
-      Tentang Saya
-     </h2>
-<p data-i18n="about_desc">
-      Saya sedang belajar membuat website menggunakan HTML dan CSS. Ini adalah contoh pertama saya.
-     </p>
-</section>
-<section id="kontak">
-<h2 data-i18n="contact_title">
-      Kontak
-     </h2>
-<form>
-<input placeholder="Nama" required="" type="text"/>
-<input placeholder="Email" required="" type="email"/>
-<textarea placeholder="Pesan" required="" rows="5"></textarea>
-<button type="submit">
-       Kirim
-      </button>
-</form>
-</section>
-<section id="katalog">
-<h2 data-i18n="catalog_title">
-      Katalog
-     </h2>
-<div class="gallery">
-<img alt="1" src="https://i.pinimg.com/736x/5b/db/52/5bdb52441611582df9b10642e518035a.jpg"/>
-<img alt="2" src="https://i.pinimg.com/736x/35/8b/65/358b6552e56a81bfb786024a629ef7c3.jpg"/>
-<img alt="3" src="https://is.zobj.net/image-server/v1/images?r=P8HqMfw8k6MCzKF0Tr7Jw13HiT-pk6pY9mBCGHxoVa-fFo3NEsGv296iCyEkp43aBLZg8WspIc0S3jnSwLVQGuIigT_PHa2j4gSI9joWiBqZlpMzhnRXjc25tzqJLDFjoT_gWGXzZWMaP8VN4zLaXhYlPFoNt2ao63x6isyzabSZU7gzyAM-_OpShQHjqTo0CFkiMwsWlChKGFMpuAT4i-BBlPjVrP0KTLFN8Zb0Z2rDRxxG7KRmhzLzEIA"/>
-<img alt="4" src="https://wallpapers.com/images/hd/beautiful-pubg-girl-character-wn9j53xb3ukkpyn5.jpg"/>
-</div>
-</section>
-</main>
+
 <script>
     const translations = {
       id: {
@@ -826,6 +856,11 @@ main {
     effect: 'slide',
   });
    </script>
+
+
+
+
+
 </main>
 <footer>
 <p data-i18n="footer_text">
