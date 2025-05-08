@@ -306,92 +306,84 @@
   }
 }
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
 main {
-  padding-top: 80px; /* beri ruang agar konten tidak tertutup header */
+  flex: 1;
+  padding-top: 80px;
 }
-
-
-/* Struktur umum */
-.navbar-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+header {
+  background-color: #111;
   padding: 10px 20px;
-  background: #111;
+}
+footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.navbar-menu.show {
+    display: flex;
+  }
 }
 
-.logo-img {
-  height: 50px;
-}
 
-.nav-links {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.nav-links a {
-  color: yellow;
-  text-decoration: none;
-}
-
-.login-form {
-  display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-}
-
-.login-form input {
-  padding: 4px 8px;
-}
-
-.login-form button {
-  background: gold;
-  border: none;
-  padding: 4px 10px;
-  cursor: pointer;
-}
-
-/* Mobile */
-.burger {
+.menu-toggle {
   display: none;
+  font-size: 1.8rem;
   background: none;
-  font-size: 1.5rem;
   color: white;
   border: none;
   cursor: pointer;
+  margin-left: auto;
+}
+
+ul.navbar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+ul.navbar-menu li {
+  display: inline-block;
+}
+
+ul.navbar-menu li a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
 }
 
 @media (max-width: 768px) {
-  .nav-links,
-  .login-form {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  body.menu-open .nav-links,
-  body.menu-open .login-form {
-    display: flex;
-  }
-
-  .burger {
+  .menu-toggle {
     display: block;
   }
-
-  .navbar-container {
+  ul.navbar-menu {
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
   }
-
-  .logo {
-    width: 100%;
-    text-align: left;
+  ul.navbar-menu.show {
+    display: flex;
   }
 }
 </style>
@@ -465,194 +457,10 @@ main {
     padding: 1rem !important;
   }
 }
-
-
-/* Global reset for better mobile layout */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  overflow-x: hidden;
-  box-sizing: border-box;
-}
-
-/* Semua elemen utama mengikuti lebar layar */
-main, section, header, nav, footer, .hero-header, form, .gallery, .auth-buttons {
-  max-width: 100%;
-  box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-/* Gambar agar tidak melebar */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Hero header perbaikan */
-.hero-header {
-  background-size: cover;
-  background-position: center;
-  min-height: 240px;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-/* Navigasi mobile */
-nav ul.navbar-menu {
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.auth-buttons,
-.auth-buttons input,
-.auth-buttons a,
-form input,
-form textarea,
-form button {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  font-size: 1rem;
-  padding: 0.6rem;
-  margin-bottom: 0.5rem;
-}
-
-h1, h2, h3, p {
-  text-align: center;
-  margin: 0.5rem 0;
-  line-height: 1.4;
-}
-
-/* Override ukuran desktop jika dibuka di HP */
-@media (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-
-  nav ul.navbar-menu {
-    display: none;
-  }
-
-  nav ul.navbar-menu.show {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 2rem;
-    color: white;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
-  .gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .gallery img {
-    border-radius: 8px;
-  }
-
-  .form-group,
-  .auth-buttons {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  form {
-    padding: 1rem 0;
-  }
-}
-
-
-/* DESKTOP (≥ 769px) */
-@media (min-width: 769px) {
-  body {
-    font-size: 16px;
-  }
-
-  header,
-  nav,
-  main,
-  footer {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  nav ul.navbar-menu {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  nav ul.navbar-menu li {
-    display: inline-block;
-  }
-
-  nav ul.navbar-menu li a {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-  }
-
-  .menu-toggle {
-    display: none !important;
-  }
-
-  .auth-buttons {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .auth-buttons input,
-  .auth-buttons a {
-    width: auto;
-  }
-
-  h2, p {
-    text-align: left;
-  }
-
-  .gallery {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .gallery img {
-    width: 300px;
-    height: auto;
-  }
-
-  form {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  form input,
-  form textarea,
-  form button {
-    font-size: 1rem;
-  }
-}
 </style>
 </head>
 <body>
-<main>
+<main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
 <div class="dropdown-language">
@@ -701,7 +509,80 @@ h1, h2, h3, p {
 <div id="clock">
 </div>
 </div>
-<header><div class="navbar-container"><div class="logo"><img alt="Logo PUBG" class="logo-img" src="images/logo.png"/></div><nav class="nav-links"><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a><a href="#katalog">Katalog</a><a href="#event">Event</a><a href="#champion">Champion</a><a href="#clan">Clan</a><a href="#trophy">Trophy</a><a href="#incoming">Incoming</a></nav><div class="login-form"><input placeholder="Username" type="text"/><input placeholder="Password" type="password"/><button>Login</button><button>Registrasi</button></div><button class="burger" onclick="document.body.classList.toggle('menu-open')">☰</button></div></header>
+<header>
+<div class="logo">
+<img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/>
+</div>
+<nav class="navbar">
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<div class="auth-buttons">
+<input class="auth-input" placeholder="Username" type="text"/>
+<input class="auth-input" placeholder="Password" type="password"/>
+<a class="login-btn" href="maintenance.html">
+        Login
+       </a>
+<a class="register-btn" href="maintenance.html">
+        Registrasi
+       </a>
+</div>
+<div class="forgot-password">
+<a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
+        Lupa Kata Sandi?
+       </a>
+</div>
+<div class="navbar-right">
+<div class="menu">
+<ul class="navbar-menu">
+<li>
+<a href="maintenance.html">
+           Beranda
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Tentang
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Kontak
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Katalog
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Event
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Champion
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Clan
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Trophy
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Incoming
+          </a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+</header>
 </div>
 <header class="hero-header">
 <div class="swiper">
@@ -718,6 +599,48 @@ h1, h2, h3, p {
 </div>
 </div>
 </header>
+<main>
+<section id="beranda">
+<h2 data-i18n="home_title">
+      Beranda
+     </h2>
+<p data-i18n="home_desc">
+      Website ini dibuat hanya dengan HTML dan CSS dasar.
+     </p>
+</section>
+<section id="tentang">
+<h2 data-i18n="about_title">
+      Tentang Saya
+     </h2>
+<p data-i18n="about_desc">
+      Saya sedang belajar membuat website menggunakan HTML dan CSS. Ini adalah contoh pertama saya.
+     </p>
+</section>
+<section id="kontak">
+<h2 data-i18n="contact_title">
+      Kontak
+     </h2>
+<form>
+<input placeholder="Nama" required="" type="text"/>
+<input placeholder="Email" required="" type="email"/>
+<textarea placeholder="Pesan" required="" rows="5"></textarea>
+<button type="submit">
+       Kirim
+      </button>
+</form>
+</section>
+<section id="katalog">
+<h2 data-i18n="catalog_title">
+      Katalog
+     </h2>
+<div class="gallery">
+<img alt="1" src="https://i.pinimg.com/736x/5b/db/52/5bdb52441611582df9b10642e518035a.jpg"/>
+<img alt="2" src="https://i.pinimg.com/736x/35/8b/65/358b6552e56a81bfb786024a629ef7c3.jpg"/>
+<img alt="3" src="https://is.zobj.net/image-server/v1/images?r=P8HqMfw8k6MCzKF0Tr7Jw13HiT-pk6pY9mBCGHxoVa-fFo3NEsGv296iCyEkp43aBLZg8WspIc0S3jnSwLVQGuIigT_PHa2j4gSI9joWiBqZlpMzhnRXjc25tzqJLDFjoT_gWGXzZWMaP8VN4zLaXhYlPFoNt2ao63x6isyzabSZU7gzyAM-_OpShQHjqTo0CFkiMwsWlChKGFMpuAT4i-BBlPjVrP0KTLFN8Zb0Z2rDRxxG7KRmhzLzEIA"/>
+<img alt="4" src="https://wallpapers.com/images/hd/beautiful-pubg-girl-character-wn9j53xb3ukkpyn5.jpg"/>
+</div>
+</section>
+</main>
 <script>
     const translations = {
       id: {
@@ -851,46 +774,6 @@ h1, h2, h3, p {
     effect: 'slide',
   });
    </script>
-<section id="beranda">
-<h2 data-i18n="home_title">
-      Beranda
-     </h2>
-<p data-i18n="home_desc">
-      Website ini dibuat hanya dengan HTML dan CSS dasar.
-     </p>
-</section>
-<section id="tentang">
-<h2 data-i18n="about_title">
-      Tentang Saya
-     </h2>
-<p data-i18n="about_desc">
-      Saya sedang belajar membuat website menggunakan HTML dan CSS. Ini adalah contoh pertama saya.
-     </p>
-</section>
-<section id="kontak">
-<h2 data-i18n="contact_title">
-      Kontak
-     </h2>
-<form>
-<input placeholder="Nama" required="" type="text"/>
-<input placeholder="Email" required="" type="email"/>
-<textarea placeholder="Pesan" required="" rows="5"></textarea>
-<button type="submit">
-       Kirim
-      </button>
-</form>
-</section>
-<section id="katalog">
-<h2 data-i18n="catalog_title">
-      Katalog
-     </h2>
-<div class="gallery">
-<img alt="1" src="https://i.pinimg.com/736x/5b/db/52/5bdb52441611582df9b10642e518035a.jpg"/>
-<img alt="2" src="https://i.pinimg.com/736x/35/8b/65/358b6552e56a81bfb786024a629ef7c3.jpg"/>
-<img alt="3" src="https://is.zobj.net/image-server/v1/images?r=P8HqMfw8k6MCzKF0Tr7Jw13HiT-pk6pY9mBCGHxoVa-fFo3NEsGv296iCyEkp43aBLZg8WspIc0S3jnSwLVQGuIigT_PHa2j4gSI9joWiBqZlpMzhnRXjc25tzqJLDFjoT_gWGXzZWMaP8VN4zLaXhYlPFoNt2ao63x6isyzabSZU7gzyAM-_OpShQHjqTo0CFkiMwsWlChKGFMpuAT4i-BBlPjVrP0KTLFN8Zb0Z2rDRxxG7KRmhzLzEIA"/>
-<img alt="4" src="https://wallpapers.com/images/hd/beautiful-pubg-girl-character-wn9j53xb3ukkpyn5.jpg"/>
-</div>
-</section>
 </main>
 <footer>
 <p data-i18n="footer_text">
