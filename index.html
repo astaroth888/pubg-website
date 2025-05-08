@@ -280,7 +280,32 @@
 .forgot-password a:hover {
   text-decoration: underline;
 }
-  </style>
+  
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  ul.navbar-menu.show {
+    display: flex;
+  }
+}
+</style>
 <style>
    html, body {
   height: 100%;
@@ -408,6 +433,8 @@ main {
 <img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/>
 </div>
 <nav class="navbar">
+<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
 <div class="auth-buttons">
 <input class="auth-input" placeholder="Username" type="text"/>
 <input class="auth-input" placeholder="Password" type="password"/>
@@ -673,5 +700,10 @@ main {
     © KRAFTON 2025 PUBG Mobile.
    </p>
 </footer>
-</body>
+<script>
+function toggleMenu() {
+  const menu = document.querySelector("ul.navbar-menu");
+  menu.classList.toggle("show");
+}
+</script></body>
 </html>
