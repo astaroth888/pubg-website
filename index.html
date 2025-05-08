@@ -567,39 +567,58 @@ h1, h2, h3, p {
 }
 
 
-/* Struktur header desktop */
-.header-wrapper {
+/* Struktur layout */
+.header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
+  background: #111;
 }
 
-.header-left img.logo {
+.logo-area img {
   height: 50px;
 }
 
-.header-center {
+.nav-area {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
-.header-right {
+.nav-links {
+  list-style: none;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.login-area {
+  display: flex;
   gap: 0.5rem;
 }
 
-.auth-buttons input {
-  width: 120px;
+.login-area input {
+  padding: 4px;
 }
 
-.burger {
+.login-area button {
+  background: gold;
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.burger-toggle {
   display: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   background: none;
   color: white;
   border: none;
@@ -608,29 +627,19 @@ h1, h2, h3, p {
 
 /* Mobile */
 @media (max-width: 768px) {
-  .header-wrapper {
-    flex-direction: row;
-  }
-
-  .burger {
-    display: block;
-    margin-left: auto;
-  }
-
-  .navbar-center nav {
+  .nav-links {
     display: none;
     flex-direction: column;
-    width: 100%;
-    gap: 0.5rem;
     margin-top: 1rem;
   }
-
-  .navbar-center nav.show {
-    display: flex !important;
+  .nav-links.show {
+    display: flex;
   }
-
-  .header-right {
+  .login-area {
     display: none;
+  }
+  .burger-toggle {
+    display: block;
   }
 }
 </style>
@@ -685,75 +694,7 @@ h1, h2, h3, p {
 <div id="clock">
 </div>
 </div>
-<header><div class="header-wrapper"><div class="header-left"><img alt="PUBG Logo" class="logo" src="images/pubg-logo.png"/></div><div class="header-center"><button class="burger" onclick="document.querySelector('.navbar-center').classList.toggle('show');">☰</button><nav class="navbar-center">
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-<div class="forgot-password">
-<a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
-        Lupa Kata Sandi?
-       </a>
-</div>
-<div class="navbar-right">
-<div class="menu">
-<ul class="navbar-menu">
-<li>
-<a href="maintenance.html">
-           Beranda
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Tentang
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Kontak
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Katalog
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Event
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Champion
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Clan
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Trophy
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Incoming
-          </a>
-</li>
-</ul>
-</div>
-</div>
-</nav></div><div class="header-right"><div class="auth-buttons">
-<input class="auth-input" placeholder="Username" type="text"/>
-<input class="auth-input" placeholder="Password" type="password"/>
-<a class="login-btn" href="maintenance.html">
-        Login
-       </a>
-<a class="register-btn" href="maintenance.html">
-        Registrasi
-       </a>
-</div></div></div></header>
+<header><div class="header-container"><div class="logo-area"><img alt="PUBG Logo" src="images/pubg-logo.png"/></div><nav class="nav-area"><ul class="nav-links"><li><a href="#beranda">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#kontak">Kontak</a></li><li><a href="#katalog">Katalog</a></li><li><a href="#event">Event</a></li><li><a href="#champion">Champion</a></li><li><a href="#clan">Clan</a></li><li><a href="#trophy">Trophy</a></li><li><a href="#incoming">Incoming</a></li></ul></nav><div class="login-area"><input placeholder="Username" type="text"/><input placeholder="Password" type="password"/><button>Login</button><button>Registrasi</button></div><button class="burger-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button></div></header>
 </div>
 <header class="hero-header">
 <div class="swiper">
