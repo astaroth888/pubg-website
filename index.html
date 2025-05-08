@@ -310,6 +310,90 @@
 main {
   padding-top: 80px; /* beri ruang agar konten tidak tertutup header */
 }
+
+
+/* Struktur umum */
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: #111;
+}
+
+.logo-img {
+  height: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: yellow;
+  text-decoration: none;
+}
+
+.login-form {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.login-form input {
+  padding: 4px 8px;
+}
+
+.login-form button {
+  background: gold;
+  border: none;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+/* Mobile */
+.burger {
+  display: none;
+  background: none;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .login-form {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  body.menu-open .nav-links,
+  body.menu-open .login-form {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    width: 100%;
+    text-align: left;
+  }
+}
 </style>
 <style>
    html, body {
@@ -565,83 +649,6 @@ h1, h2, h3, p {
     font-size: 1rem;
   }
 }
-
-
-/* Struktur layout */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0.5rem 1rem;
-  background: #111;
-}
-
-.logo-area img {
-  height: 50px;
-}
-
-.nav-area {
-  flex-grow: 1;
-  text-align: center;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links li a {
-  color: yellow;
-  text-decoration: none;
-}
-
-.login-area {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.login-area input {
-  padding: 4px;
-}
-
-.login-area button {
-  background: gold;
-  border: none;
-  padding: 4px 10px;
-  cursor: pointer;
-}
-
-.burger-toggle {
-  display: none;
-  font-size: 1.6rem;
-  background: none;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    margin-top: 1rem;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .login-area {
-    display: none;
-  }
-  .burger-toggle {
-    display: block;
-  }
-}
 </style>
 </head>
 <body>
@@ -694,7 +701,7 @@ h1, h2, h3, p {
 <div id="clock">
 </div>
 </div>
-<header><div class="header-container"><div class="logo-area"><img alt="PUBG Logo" src="images/pubg-logo.png"/></div><nav class="nav-area"><ul class="nav-links"><li><a href="#beranda">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#kontak">Kontak</a></li><li><a href="#katalog">Katalog</a></li><li><a href="#event">Event</a></li><li><a href="#champion">Champion</a></li><li><a href="#clan">Clan</a></li><li><a href="#trophy">Trophy</a></li><li><a href="#incoming">Incoming</a></li></ul></nav><div class="login-area"><input placeholder="Username" type="text"/><input placeholder="Password" type="password"/><button>Login</button><button>Registrasi</button></div><button class="burger-toggle" onclick="document.querySelector('.nav-links').classList.toggle('show')">☰</button></div></header>
+<header><div class="navbar-container"><div class="logo"><img alt="Logo PUBG" class="logo-img" src="images/logo.png"/></div><nav class="nav-links"><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a><a href="#katalog">Katalog</a><a href="#event">Event</a><a href="#champion">Champion</a><a href="#clan">Clan</a><a href="#trophy">Trophy</a><a href="#incoming">Incoming</a></nav><div class="login-form"><input placeholder="Username" type="text"/><input placeholder="Password" type="password"/><button>Login</button><button>Registrasi</button></div><button class="burger" onclick="document.body.classList.toggle('menu-open')">☰</button></div></header>
 </div>
 <header class="hero-header">
 <div class="swiper">
