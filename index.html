@@ -567,74 +567,53 @@ h1, h2, h3, p {
 }
 
 
-/* ===== DESKTOP (≥ 769px) ===== */
-@media (min-width: 769px) {
-  .header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo-container {
-    flex: 0 0 auto;
-  }
-
-  .nav-center {
-    flex: 1 1 auto;
-    display: flex !important;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .auth-container {
-    flex: 0 0 auto;
-    display: flex;
-    gap: 0.5rem;
-  }
-
-  .auth-container input,
-  .auth-container a {
-    width: auto;
-  }
-
-  .menu-toggle {
-    display: none !important;
-  }
+/* Reset struktur navigasi utama */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
 }
 
-/* ===== MOBILE (≤ 768px) ===== */
+.header-logo img {
+  height: 60px;
+}
+
+.header-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-auth {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Tampilan mobile */
 @media (max-width: 768px) {
-  .nav-center,
-  .auth-container {
-    display: none !important;
+  .header-nav .navbar-menu,
+  .header-auth {
+    display: none;
   }
 
-  .navbar-menu.show {
-    display: flex !important;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: #111;
+  .navbar-menu.show,
+  .menu-toggle {
+    display: block;
   }
 
   .menu-toggle {
-    display: block;
+    font-size: 1.8rem;
     background: none;
     color: white;
-    font-size: 2rem;
     border: none;
     cursor: pointer;
     margin-left: auto;
   }
 
   .header-wrapper {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
   }
 }
 </style>
@@ -689,7 +668,9 @@ h1, h2, h3, p {
 <div id="clock">
 </div>
 </div>
-<header><div class="header-wrapper"><div class="logo-container"><img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/></div><nav class="nav-center navbar-menu">
+<header><div class="header-wrapper"><div class="header-logo"><div class="logo">
+<img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/>
+</div></div><div class="header-nav"><button class="menu-toggle" onclick="toggleMenu()">☰</button><nav class="navbar">
 <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
 <div class="forgot-password">
@@ -748,7 +729,7 @@ h1, h2, h3, p {
 </ul>
 </div>
 </div>
-</nav><div class="auth-container">
+</nav></div><div class="header-auth"><div class="auth-buttons">
 <input class="auth-input" placeholder="Username" type="text"/>
 <input class="auth-input" placeholder="Password" type="password"/>
 <a class="login-btn" href="maintenance.html">
@@ -757,7 +738,7 @@ h1, h2, h3, p {
 <a class="register-btn" href="maintenance.html">
         Registrasi
        </a>
-</div><button class="menu-toggle" onclick="document.querySelector('.navbar-menu').classList.toggle('show');">☰</button></div></header>
+</div></div></div></header>
 </div>
 <header class="hero-header">
 <div class="swiper">
