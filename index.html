@@ -489,6 +489,82 @@ h1, h2, h3, p {
     padding: 1rem 0;
   }
 }
+
+
+/* DESKTOP (≥ 769px) */
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+
+  header,
+  nav,
+  main,
+  footer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav ul.navbar-menu {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul.navbar-menu li {
+    display: inline-block;
+  }
+
+  nav ul.navbar-menu li a {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .menu-toggle {
+    display: none !important;
+  }
+
+  .auth-buttons {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .auth-buttons input,
+  .auth-buttons a {
+    width: auto;
+  }
+
+  h2, p {
+    text-align: left;
+  }
+
+  .gallery {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .gallery img {
+    width: 300px;
+    height: auto;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 1rem;
+  }
+}
 </style>
 </head>
 <body>
