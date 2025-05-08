@@ -306,9 +306,40 @@
   }
 }
 
-
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
 main {
-  padding-top: 80px; /* beri ruang agar konten tidak tertutup header */
+  flex: 1;
+  padding-top: 80px;
+}
+header {
+  background-color: #111;
+  padding: 10px 20px;
+}
+footer {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.navbar-menu.show {
+    display: flex;
+  }
 }
 </style>
 <style>
