@@ -583,7 +583,7 @@ h2, p {
 </style>
 </head>
 <body>
-<main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
+<main style="padding: 20px; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
 <div class="dropdown-language">
@@ -722,7 +722,6 @@ h2, p {
 </div>
 </div>
 </header>
-
 <script>
     const translations = {
       id: {
@@ -856,17 +855,12 @@ h2, p {
     effect: 'slide',
   });
    </script>
-
-
-
-
-
-</main>
 <footer>
 <p data-i18n="footer_text">
     © KRAFTON 2025 PUBG Mobile.
    </p>
-</footer>
+</footer></main>
+
 <script>
 function toggleMenu() {
   const menu = document.querySelector("ul.navbar-menu");
