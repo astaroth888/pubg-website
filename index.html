@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Memanjakan Diri</title>
+  <title>Komunitas PUBG Mobile | Memanjakan Diri</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,6 +12,200 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
+
+  /* Font & Reset */
+body {
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0e0e0e;
+  color: #fff;
+}
+
+a {
+  color: #facc15;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Top Container */
+.top-container {
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+#clock {
+  font-weight: 500;
+}
+
+/* Dropdown Language */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 140px;
+  z-index: 1;
+  border: 1px solid #333;
+}
+
+.dropdown-content a {
+  padding: 10px;
+  display: block;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Header */
+header {
+  background-color: #000;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 40px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.login-button, .register-button {
+  background-color: #facc15;
+  border: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  border-radius: 4px;
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-weight: 600;
+  color: #facc15;
+}
+
+/* Menu Toggle (Mobile) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #facc15;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Hero Section */
+.hero-header {
+  width: 100%;
+}
+
+.hero-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Main Sections */
+main {
+  padding: 40px 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+/* Kontak Form */
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #facc15;
+  border: none;
+  padding: 10px 20px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #aaa;
+  font-size: 14px;
+}
+
+  
 <body>
   <!-- Topbar dan Header Lengket -->
   <div class="sticky-header">
