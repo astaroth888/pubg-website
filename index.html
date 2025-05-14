@@ -786,5 +786,26 @@ function toggleMenu() {
   const menu = document.querySelector("ul.navbar-menu");
   menu.classList.toggle("show");
 }
-</script></body>
+</script>
+
+   <script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+</script>
+
+<script>
+  document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) return false;
+    if (e.key === 'F12') return false;
+  };
+</script>
+
+<script>
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      e.preventDefault();
+    }
+  });
+</script>
+
+</body>
 </html>
