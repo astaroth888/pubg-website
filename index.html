@@ -222,6 +222,8 @@
         font-size: 18px;
       }
     }
+    
+    
 
     main {
       padding: 26rem;
@@ -657,6 +659,40 @@ main {
     <div class="jackpot-amount" id="jackpot">IDR 39,094,433,486</div>
   </div>
 
+<div class="promo-section">
+    <h2 class="promo-title">PUBG Mobile - EVENT BERLANGSUNG</h2>
+
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg" alt="Erangel">
+          <div class="slide-caption">Erangel Battle</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg" alt="Livik">
+          <div class="slide-caption">Livik Mayhem</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large" alt="TDM">
+          <div class="slide-caption">TDM Arena</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg" alt="Miramar">
+          <div class="slide-caption">Miramar Storm</div>
+        </div>
+        <!-- Tambahkan slide lagi jika perlu -->
+      </div>
+
+      <!-- If needed -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+  
 <section id="beranda">
 <h2 data-i18n="home_title">
       Beranda
@@ -879,6 +915,38 @@ function toggleMenu() {
     }
 
     setInterval(updateJackpot, 100); // update setiap 100ms
+  </script>
+  
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Init Swiper -->
+  <script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
   </script>
   
 </body>
