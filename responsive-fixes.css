@@ -1,0 +1,45 @@
+
+/* ==== RESPONSIVE FIXES ==== */
+
+@media (max-width: 600px) {
+  .jackpot-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .jackpot-amount {
+    font-size: 28px;
+  }
+
+  .jackpot-label {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem !important;
+  }
+
+  .widget-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .widget-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Fix umum */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Perbaiki padding utama */
+main {
+  padding: 2rem;
+}
