@@ -1,0 +1,145 @@
+
+/* === BASE STYLE FIXES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* === BODY === */
+body {
+  background-color: #000;
+  font-family: Arial, sans-serif;
+  color: #FFD700;
+  margin: 0;
+  padding: 0;
+}
+
+/* === MAIN PADDING FIX === */
+main {
+  padding: 2rem;
+  max-width: 100%;
+  margin: auto;
+  flex: 1;
+}
+
+/* === JACKPOT CONTAINER FIX === */
+.jackpot-container {
+  background-color: #000;
+  border: 10px solid #FFD700;
+  border-radius: 50px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  font-family: 'Share Tech Mono', monospace;
+  box-shadow: 0 0 30px #FFD700;
+  max-width: 100%;
+  margin: 10px;
+  text-align: center;
+}
+
+.jackpot-label {
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.jackpot-amount {
+  color: #FFD700;
+  font-size: 65px;
+  letter-spacing: 2px;
+}
+
+.jackpot-amount span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+/* === WIDGET CONTAINER === */
+.widget-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 60px;
+}
+
+.widget-box {
+  background-color: #000;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px 5px;
+  transition: transform 0.3s;
+  border: 3px solid #FFD700;
+}
+
+.widget-box:hover {
+  transform: scale(1.05);
+}
+
+.widget-box img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.widget-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.widget-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* === RESPONSIVE FIXES === */
+@media (max-width: 1024px) {
+  .widget-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem !important;
+  }
+
+  .jackpot-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .jackpot-label {
+    font-size: 18px;
+  }
+
+  .jackpot-amount {
+    font-size: 28px;
+  }
+
+  .widget-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .widget-container {
+    grid-template-columns: 1fr;
+  }
+}
