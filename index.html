@@ -2,6 +2,7 @@
 
 <html lang="id">
 <head>
+
 <meta charset="utf-8"/>
 <title>
    Komunitas PUBG Mobile | Memanjakan Diri
@@ -198,13 +199,13 @@
       font-weight: bold;
       padding: 10px 20px;
       border-radius: 10px;
-      font-size: 20px;
+      font-size: 30px;
       text-transform: uppercase;
     }
 
     .jackpot-amount {
       color: #FFD700;
-      font-size: 36px;
+      font-size: 65px;
       letter-spacing: 2px;
     }
 
@@ -212,6 +213,7 @@
       .jackpot-container {
         flex-direction: column;
         padding: 15px;
+        gap: 20px;
       }
 
       .jackpot-amount {
@@ -240,6 +242,11 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 60px;
     }
+    
+    img {
+  max-width: 100%;
+  height: auto;
+}
 
     .widget-box {
       background-color: #000;
@@ -323,9 +330,9 @@
       100% { transform: translateX(0); }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
       .widget-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
       .highlight-container {
         flex-direction: column;
@@ -353,10 +360,17 @@
 
 <style>
     main {
-      padding: 26rem;
+      padding: 2rem;
       max-width: 100%;
       margin: auto;
     }
+    
+    @media (max-width: 768px) {
+  main {
+    padding: 1rem !important;
+  }
+}
+
     section {
       margin-bottom: 3rem;
     }
@@ -638,6 +652,7 @@ main {
   }
 }
 </style>
+   <link rel="stylesheet" href="responsive-fixes.css" />
 </head>
 <body>
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
