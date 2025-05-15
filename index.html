@@ -78,7 +78,7 @@
 
 @media (max-width: 480px) {
 .announcement marquee {
-  font-size: 12px;
+ font-size: 12px;
     padding-right: 10px;
   }
 }
@@ -332,6 +332,7 @@
       100% { transform: translateX(0); }
     }
 
+    
     @media (max-width: 480px) {
       .widget-container {
         grid-template-columns: 1fr;
@@ -707,12 +708,14 @@ main {
 <div id="clock">
 </div>
 </div>
-<header>
+<header class="mobile-header">
+<div class="header-row">
 <div class="logo">
-<img alt="PUBG Logo" src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg"/>
+<img src="https://media.sketchfab.com/models/5848769ca37f442eb9d100374d02be4b/thumbnails/18ac83c88c7642acb4c76f900b9d152e/6b46efc4de46443aa067a74d63f4a4c9.jpeg" alt="PUBG Logo" />
 </div>
-<nav class="navbar">
-<button class="menu-toggle" onclick="toggleMenu()">☰</button>
+<button class="menu-toggle">☰</button>
+</div>
+
 <div class="auth-buttons">
 <input class="auth-input" placeholder="Username" type="text"/>
 <input class="auth-input" placeholder="Password" type="password"/>
@@ -723,6 +726,7 @@ main {
         Registrasi
        </a>
 </div>
+
 <div class="forgot-password">
 <a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
         Lupa Kata Sandi?
@@ -779,7 +783,6 @@ main {
 </ul>
 </div>
 </div>
-</nav>
 </header>
 </div>
 <header class="hero-header">
