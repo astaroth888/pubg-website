@@ -189,7 +189,7 @@
       font-family: 'Share Tech Mono', monospace;
       box-shadow: 0 0 30px #FFD700;
       max-width: 100%;
-      margin: 60px;
+      margin: 10px;
     }
 
     .jackpot-label {
@@ -223,8 +223,135 @@
       }
     }
     
-    
+    <style>
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      color: #FFD700;
+      margin: 10;
+      padding: 0;
+    }
 
+    .widget-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 60px;
+    }
+
+    .widget-box {
+      background-color: #000;
+      border-radius: 20px;
+      text-align: center;
+      padding: 20px 5px;
+      transition: transform 6s;
+      border: 3px solid #FFD700;
+    }
+
+    .widget-box:hover {
+      transform: scale(1.05);
+    }
+
+    .widget-box img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .widget-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .highlight-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .highlight-box {
+      background-color: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+      border: 3px solid #FFD700;
+    }
+
+    .highlight-header {
+      background-color: #FFD700;
+      color: #000;
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      border-bottom-right-radius: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      height: 130px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0%, 25% { transform: translateX(0); }
+      33%, 58% { transform: translateX(-100%); }
+      66%, 91% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    @media (max-width: 768px) {
+      .widget-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .highlight-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+  
+  <style>
+  .widget-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+</style>
+
+  <style>
+  .promo-title {
+  margin-top: 50px; /* Geser ke bawah */
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  color: #FFD700;
+}
+</style>
+
+<style>
     main {
       padding: 26rem;
       max-width: 100%;
@@ -658,6 +785,74 @@ main {
     <div class="jackpot-label">PROGRESSIVE JACKPOT</div>
     <div class="jackpot-amount" id="jackpot">IDR 39,094,433,486</div>
   </div>
+  
+  <div class="widget-container">
+    <a href="maintenance.html" class="widget-link">
+    <div class="widget-box">
+      <img src="https://bleedingcool.com/wp-content/uploads/2022/11/PUBG-Mobile-Version-2.3-2-900x900.jpg" alt="maintenance.html">
+      <div class="widget-title">SPORTSBOOK</div>
+    </div>
+    </a>
+    <a href="maintenance.html" class="widget-link">
+    <div class="widget-box">
+      <img src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/cc1fca0c-f6c3-4941-9a57-91e50e389cb1/b35d0c8d-61f4-4c00-9af5-dfb68d27ebde.png" alt="Slot">
+      <div class="widget-title">SLOT</div>
+    </div>
+    </a>
+    <a href="maintenance.html" class="widget-link">
+    <div class="widget-box">
+      <img src="https://i.pinimg.com/474x/9d/43/eb/9d43ebafdb60fbff41dd715d3bb19bbf.jpg" alt="Casino">
+      <div class="widget-title">CASINO</div>
+    </div>
+    </a>
+    <a href="maintenance.html" class="widget-link">
+    <div class="widget-box">
+      <img src="https://pbs.twimg.com/media/GBoGrISW0AEyorG.jpg" alt="Lottery">
+      <div class="widget-title">LOTTERY</div>
+    </div>
+    </a>
+    <a href="maintenance.html" class="widget-link">
+    <div class="widget-box">
+      <img src="https://wallpapers.com/images/hd/p-u-b-g-gamers-logo-flame-background-6c93am8saafkcnjo.jpg" alt="Download">
+      <div class="widget-title">DOWNLOAD</div>
+    </div>
+    </a>
+  </div>
+
+  <div class="highlight-container">
+    <a href="maintenance.html" class="highlight-box">
+      <div class="highlight-header">New Comming</div>
+      <div class="slider-wrapper">
+        <div class="slider">
+           <img src="https://sm.ign.com/ign_in/screenshot/default/screenshot-2023-04-06-144105_8pjq.jpg" alt="New 1">
+          <img src="https://foto.kontan.co.id/8nrd83Yid9sUfI7bdlWzFowNujQ=/smart/2025/05/08/1680330888p.jpg" alt="New 2">
+          <img src="https://esportsinsider.com/wp-content/uploads/2025/03/BABYMONSTER.jpg" alt="New 3">
+        </div>
+      </div>
+    </a>
+
+    <a href="maintenance.html" class="highlight-box">
+      <div class="highlight-header">Game Favorit</div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img src="https://wstatic-prod-boc.krafton.com/common/news/20241104/EVOV6Yex.png" alt="Game 1">
+          <img src="https://i.ytimg.com/vi/QdUASPN6H0k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBTjah0WFsrB4X27PwWBBOS0XkkVg" alt="Game 2">
+          <img src="https://bleedingcool.com/wp-content/uploads/2024/09/PUBG-Mobile-3.4-Event-2000x1125.jpg" alt="Game 3">
+        </div>
+      </div>
+    </a>
+
+    <a href="maintenance.html" class="highlight-box">
+      <div class="highlight-header">Maps Favorit</div>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img src="https://telecomtalk.info/wp-content/uploads/2020/08/pubg-mobile-major-updat-september.jpg.webp" alt="Maps 1">
+          <img src="https://media.sportstiger.com/media/pubg-mobile-37-update-download-3-1741322941946-large.webp" alt="Maps 2">
+          <img src="https://nnc-media.netralnews.com/IMG-Netral-News-Admin-41-QF1WBTA8ZD.jpg" alt="Maps 3">
+        </div>
+      </div>
+    </a>
+  </div>
 
 <div class="promo-section">
     <h2 class="promo-title">PUBG Mobile - EVENT BERLANGSUNG</h2>
@@ -668,24 +863,24 @@ main {
       <div class="swiper-wrapper">
         <!-- Slides -->
         <div class="swiper-slide">
-          <img src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg" alt="Erangel">
-          <div class="slide-caption">Erangel Battle</div>
+          <a href="maintenance.html"><img src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg" alt="Godzilla"></a>
+          <div class="slide-caption">Awaken The Mighty</div>
         </div>
         <div class="swiper-slide">
-          <img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg" alt="Livik">
-          <div class="slide-caption">Livik Mayhem</div>
+          <a href="maintenance.html"><img src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg" alt="Pmgo"></a>
+          <div class="slide-caption">2025 Pmgo</div>
         </div>
         <div class="swiper-slide">
-          <img src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large" alt="TDM">
-          <div class="slide-caption">TDM Arena</div>
+          <a href="maintenance.html"><img src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large" alt="New Years"></a>
+          <div class="slide-caption">New Years 2025</div>
         </div>
         <div class="swiper-slide">
-          <img src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg" alt="Miramar">
-          <div class="slide-caption">Miramar Storm</div>
+          <a href="maintenance.html"><img src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg" alt="Alan"></a>
+          <div class="slide-caption">Alan Walker</div>
         </div>
         <!-- Tambahkan slide lagi jika perlu -->
       </div>
-       
+
     </div>
   </div>
   
