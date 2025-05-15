@@ -156,3 +156,46 @@ main {
   }
 }
 
+@media (max-width: 480px) {
+  .top-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  header .logo img {
+    height: 40px;
+  }
+
+  .auth-buttons input,
+  .auth-buttons a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .auth-buttons {
+    margin-top: 5px;
+  }
+
+  .menu-toggle {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+
+  .dropdown-button {
+    font-size: 12px;
+  }
+
+  #clock {
+    font-size: 12px;
+  }
+
+  .announcement marquee {
+    font-size: 12px;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+  }
+}
