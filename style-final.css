@@ -143,3 +143,16 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .announcement marquee {
+    font-size: 12px;
+    padding-right: 20px;
+  }
+
+  .announcement {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
