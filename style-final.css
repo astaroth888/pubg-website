@@ -247,7 +247,7 @@ header .logo img {
   .slider-container {
       width: 100%;
       overflow: hidden;
-      padding: 40px 40px;
+      padding: 40px;
     }
 
     .slider-track {
@@ -255,6 +255,12 @@ header .logo img {
       width: max-content;
       animation: scroll 60s linear infinite;
     }
+
+.widget-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
 
     @keyframes scroll {
       0% { transform: translateX(0); }
