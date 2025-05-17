@@ -247,7 +247,7 @@ header .logo img {
   .slider-container {
       width: 100%;
       overflow: hidden;
-      padding: 50px 0;
+      padding: 40px 40px;
     }
 
     .slider-track {
