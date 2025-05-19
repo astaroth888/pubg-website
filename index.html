@@ -1507,13 +1507,15 @@ function toggleMenu() {
     }
   </script>
 
-<!-- Start of LiveChat (www.livechat.com) code -->
 <script>
   window.__lc = window.__lc || {};
   window.__lc.license = 19168575;
   window.__lc.integration_name = "manual_onboarding";
   window.__lc.product_name = "livechat";
-  window.__lc.asyncInit = true; // agar tidak langsung aktif
+  window.__lc.asyncInit = true;
+  window.__lc.params = {
+    hide: true
+  };
 </script>
 <script>
   (function(n,t,c){
@@ -1535,25 +1537,27 @@ function toggleMenu() {
     n.LiveChatWidget = n.LiveChatWidget || e;
   })(window,document,[].slice);
 </script>
-<!-- End of LiveChat code -->
 
-<!-- Tombol custom trigger -->
 <script>
   window.addEventListener("DOMContentLoaded", function () {
     const customChatBtn = document.getElementById('custom-livechat-button');
 
     if (customChatBtn) {
       customChatBtn.addEventListener('click', function () {
-        // Jalankan inisialisasi jika belum dilakukan
         if (typeof LiveChatWidget !== 'undefined' && LiveChatWidget.init) {
           LiveChatWidget.init();
         }
 
-        // Saat widget siap
-        LiveChatWidget.on('visibility_changed', function(data) {
-  if (!data.visible) {
-          LiveChatWidget.call('hide');      // ⛔ langsung sembunyikan ikon kuning
-          LiveChatWidget.call('maximize');  // ✅ tampilkan jendela chat
+        LiveChatWidget.on('ready', function () {
+          LiveChatWidget.call('hide');      // sembunyikan ikon bubble dulu
+          LiveChatWidget.call('maximize');  // tampilkan jendela chat
+
+          // jika pengguna tutup jendela, sembunyikan kembali ikon
+          LiveChatWidget.on('visibility_changed', function(data) {
+            if (!data.visible) {
+              LiveChatWidget.call('hide');
+            }
+          });
         });
       });
     }
