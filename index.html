@@ -1507,17 +1507,1513 @@ function toggleMenu() {
     }
   </script>
 
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<link href="icons/favicon.png" rel="icon" type="image/png"/>
+<title>
+   Komunitas PUBG Mobile | Memanjakan Diri
+  </title>
+<meta content="Situs komunitas PUBG Mobile. Galeri, turnamen, dan informasi update seputar PUBG Indonesia." name="description"/>
+<meta content="PUBG Mobile, komunitas PUBG, turnamen PUBG, battle royale, game mobile, PUBG Indonesia" name="keywords"/>
+<meta content="memanjakandiri.xyz" name="author"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Komunitas PUBG Mobile | Memanjakan Diri" property="og:title"/>
+<meta content="Gabung komunitas PUBG Mobile, cek galeri dan turnamen terbaru." property="og:description"/>
+<meta content="https://www.memanjakandiri.xyz/images/banner.jpg" property="og:image"/>
+<meta content="https://www.memanjakandiri.xyz/" property="og:url"/>
+<meta content="website" property="og:type"/>
+<link href="https://www.memanjakandiri.xyz/" rel="canonical">
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<style>
+   * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    
+    body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+       font-family: Arial, sans-serif;
+       background-color: #000;
+       color: #FFD700;
+  background-image: url('https://images5.alphacoders.com/925/thumb-1920-925157.jpg'); /* ganti sesuai path gambar kamu */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 130px;
+  position: relative;
+  cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+}
+    body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+    
+    .sticky-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: #111;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    .top-container {
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 14px;
+    }
+    .announcement {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 1rem;
+  color: #facc15;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.announcement i {
+  color: #facc15;
+}
+
+@media (max-width: 480px) {
+.announcement marquee {
+ font-size: 12px;
+    padding-right: 10px;
+  }
+}
+    #clock {
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    .dropdown-language {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-button {
+      background-color: transparent;
+      color: #facc15;
+      padding: 0rem 0rem;
+      font-weight: bold;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #747474;
+      min-width: 200px;
+      z-index: 1;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .dropdown-content div {
+      color: #111;
+      padding: 0.5rem 1rem;
+      cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: bold;
+    }
+    .dropdown-content div:hover {
+      background-color: #facc15;
+      color: #000;
+    }
+    .dropdown-language:hover .dropdown-content {
+      display: block;
+    }
+    .flag {
+      width: 20px;
+      height: 14px;
+      object-fit: cover;
+    }
+
+    header {
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+    .logo img {
+      height: 80px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 0rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #facc15;
+      font-weight: bold;
+      padding: 0.5rem 4.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+      cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+    }
+    nav ul li a:hover {
+      background-color: #333;
+    }
+.hero-header {
+  width: 100%;
+  height: 444px;
+  overflow: hidden;
+  margin-top: 105px;
+}
+
+.swiper, .swiper-wrapper, .swiper-slide {
+  width: 100%;
+  height: 444px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 444px;
+  object-fit: fixed;
+  display: block;
+  background-color: transparent;
+}
+
+ @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    .jackpot-container {
+      background-color: #000;
+      border: 10px solid #FFD700;
+      border-radius: 50px;
+      padding: 30px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 150px;
+      font-family: 'Share Tech Mono', monospace;
+      box-shadow: 0 0 30px #FFD700;
+      max-width: 100%;
+      margin: 10px;
+    }
+
+    .jackpot-label {
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+
+    .jackpot-amount {
+      color: #FFD700;
+      font-size: 65px;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 600px) {
+      .jackpot-container {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+      }
+
+      .jackpot-amount {
+        font-size: 28px;
+      }
+
+      .jackpot-label {
+        font-size: 18px;
+      }
+    }
+    
+    <style>
+    body {
+      background-color: #000;
+      font-family: Arial, sans-serif;
+      color: #FFD700;
+      margin: 10;
+      padding: 0;
+    }
+
+    .widget-container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 60px;
+    }
+    
+    img {
+  max-width: 100%;
+  height: auto;
+}
+
+    .widget-box {
+      background-color: #000;
+      border-radius: 20px;
+      text-align: center;
+      padding: 20px 5px;
+      transition: transform 6s;
+      border: 3px solid #FFD700;
+    }
+
+    .widget-box:hover {
+      transform: scale(1.05);
+    }
+
+    .widget-box img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 8px;
+    }
+
+    .widget-title {
+      font-size: 14px;
+      font-weight: bold;
+      color: #FFD700;
+    }
+
+    .highlight-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .highlight-box {
+      background-color: #000;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      flex: 1;
+      border: 3px solid #FFD700;
+    }
+
+    .highlight-header {
+      background-color: #FFD700;
+      color: #000;
+      padding: 5px 10px;
+      font-weight: bold;
+      font-size: 14px;
+      border-bottom-right-radius: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .slider-wrapper {
+      width: 100%;
+      height: 130px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slider {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      animation: slide 12s infinite;
+    }
+
+    .slider img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      flex-shrink: 0;
+    }
+
+    @keyframes slide {
+      0%, 25% { transform: translateX(0); }
+      33%, 58% { transform: translateX(-100%); }
+      66%, 91% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    
+    @media (max-width: 480px) {
+      .widget-container {
+        grid-template-columns: 1fr;
+      }
+      .highlight-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+<title>Menu Bergerak Otomatis Responsif</title>
+<style>
+  .slider-container {
+      width: 100%;
+      overflow: hidden;
+      padding: 40px 40px;
+    }
+
+    .slider-track {
+      display: flex;
+      width: max-content;
+      animation: scroll 60s linear infinite;
+    }
+    
+    .widget-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .menu-box {
+      background-color: #222;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      color: #FFD700;
+      width: clamp(140px, 40vw, 180px); /* Responsif */
+      margin-right: 16px;
+      padding: 10px;
+      box-sizing: border-box;
+      flex-shrink: 0;
+      text-align: center;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.5);
+    }
+
+    .menu-title {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .menu-date {
+      font-size: 12px;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .menu-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #000;
+      background-color: #FFD700;
+      padding: 8px 0;
+      border-radius: 6px;
+      border: 2px dashed #000;
+    }
+
+    @media (max-width: 480px) {
+      .menu-title {
+        font-size: 14px;
+      }
+      .menu-number {
+        font-size: 20px;
+        padding: 6px 0;
+      }
+    }
+  </style>
+<title>Menu Pembayaran</title>
+<style>
+  .info-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 10px;
+  color: #FFD700;
+  font-family: 'Arial', sans-serif;
+}
+
+.layanan-member, .sistem-pembayaran {
+  background-color: #222;
+  padding: 20px;
+  border-radius: 40px;
+  width: 850px;
+  box-shadow: 0 0 15px #FFD700;
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #FFD700;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.bar {
+  background-color: #333;
+  border-radius: 20px;
+  flex: 1;
+  height: 10px;
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background-color: #FFD700;
+}
+
+.bar-fill.short {
+  width: 20%;
+}
+
+.bar-fill.long {
+  width: 80%;
+}
+
+.time-box {
+  background-color: #222;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.time-box span {
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #ccc;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  font-size: 14px;
+}
+
+.payment-grid div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.online {
+  color: #00ff00;
+}
+
+.offline {
+  color: #ff3c3c;
+}
+</style>
+<style>
+  .widget-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+</style>
+<title>PUBGSLOT # Situs Link Gacor</title>
+<style>
+.banner-frame {
+  background-color: #000; /* latar belakang hitam */
+  color: #FFD700; /* teks kuning keemasan */
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  padding: 30px;
+  margin: 30px auto;
+  border: 3px solid #FFD700; /* border kuning keemasan */
+  border-radius: 40px;
+  max-width: 100%;
+  font-family: 'Orbitron', sans-serif; /* gunakan Orbitron jika ingin efek seperti di gambar */
+}
+</style>
+<title>Icon Provider</title>
+<style>
+.provider-section {
+  background: #000;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.provider-category {
+  margin-bottom: 40px;
+}
+
+.provider-header {
+  font-size: 20px;
+  text-align: left;
+  margin: 15px 0;
+  color: #ffd700;
+}
+
+.provider-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.provider-logos img {
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.provider-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* MEDIA QUERIES: Untuk layar lebih kecil */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 24px;
+  }
+
+  .provider-header {
+    font-size: 16px;
+  }
+
+  .provider-logos {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .provider-logos img {
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .provider-logos img {
+    height: 25px;
+  }
+}
+</style>
+<title>Tautan Teks Akhir</title>
+<style>
+.site-footer {
+  background-color: #000;
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid #333;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-links a:hover {
+  text-decoration: none;
+}
+</style>
+<style>
+  .promo-title {
+  margin-top: 50px; /* Geser ke bawah */
+  text-align: center;
+  font-size: 38px;
+  font-weight: bold;
+  color: #FFD700;
+}
+</style>
+<style>
+    main {
+      padding: 2rem;
+      max-width: 100%;
+      margin: auto;
+    }
+    
+    @media (max-width: 768px) {
+  main {
+    padding: 1rem !important;
+  }
+}
+
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #facc15;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #facc15;
+      padding-bottom: 0.5rem;
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 1rem;
+      border-radius: 5px;
+      border: none;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #facc15;
+      padding: 1rem;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      color: #000;
+      cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: calc(25% - 1rem);
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 0.5rem;
+      background-color: #111;
+      color: #aaa;
+    }
+    .auth-buttons {
+      display: flex;
+      justify-content: right;
+      gap: 5px;
+      margin-top: 5px;
+    }
+
+    .auth-buttons a {
+      padding: 5px 43px;
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+      background-color: gold;
+      border-radius: 80px;
+      transition: background-color 0.3s ease;
+    }
+
+    .auth-buttons a:hover {
+      background-color: darkorange;
+      color: white;
+      cursor: url('https://cur.cursors-4u.net/games/gam-9/gam892.cur'), crosshair;
+    }
+    
+    .auth-input {
+  padding: 5px 10px;
+  border-radius: 60px;
+  border: none;
+  font-size: 14px;
+}
+
+.auth-buttons input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #facc15;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.forgot-password a {
+  color: #ffffff;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+  
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+  ul.navbar-menu.show {
+    display: flex;
+  }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+main {
+  flex: 1;
+  padding-top: 80px;
+}
+header {
+  background-color: transparent;
+  padding: 9px 0px;
+}
+footer {
+  background-color: #111;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: auto;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  nav ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+  }
+  nav ul.navbar-menu.show {
+    display: flex;
+  }
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+ul.navbar-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+ul.navbar-menu li {
+  display: inline-block;
+}
+
+ul.navbar-menu li a {
+  color: gold;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  ul.navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  ul.navbar-menu.show {
+    display: flex;
+  }
+}
+</style>
+<style>
+   html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+  
+
+@media (max-width: 768px) {
+  .top-container,
+  header,
+  nav.navbar,
+  .auth-buttons,
+  .gallery {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  nav ul.navbar-menu {
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+  }
+
+  nav ul.navbar-menu li a {
+    padding: 0.5rem 1rem !important;
+    text-align: center;
+  }
+
+  .auth-buttons {
+    gap: 10px;
+    justify-content: center !important;
+    flex-wrap: wrap;
+  }
+
+  .auth-buttons input,
+  .auth-buttons a {
+    width: 100% !important;
+    text-align: center;
+  }
+
+  .forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .gallery {
+    gap: 10px;
+  }
+
+  .gallery img {
+    width: 100% !important;
+  }
+
+  .hero-header {
+    height: 250px !important;
+  }
+
+  .swiper-slide img {
+    object-fit: contain !important;
+  }
+
+  main {
+    padding: 1rem !important;
+  }
+}
+</style>
+
+<link href="responsive-fixes.css" rel="stylesheet"/>
+<link href="style-final.css" rel="stylesheet"/>
+</head>
+<body>
+<main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
+<div class="sticky-header">
+<div class="top-container">
+<div class="dropdown-language">
+<div class="dropdown-button" id="selected-lang">
+<img class="flag" src="https://flagcdn.com/id.svg"/>
+       Indonesia
+      </div>
+<div class="dropdown-content" id="language-list">
+<div data-lang="id">
+<img class="flag" src="https://flagcdn.com/id.svg"/>
+        Indonesia
+       </div>
+<div data-lang="en">
+<img class="flag" src="https://flagcdn.com/gb.svg"/>
+        English
+       </div>
+<div data-lang="zh">
+<img class="flag" src="https://flagcdn.com/cn.svg"/>
+        中文
+       </div>
+<div data-lang="th">
+<img class="flag" src="https://flagcdn.com/th.svg"/>
+        ไทย (Thailand)
+       </div>
+<div data-lang="km">
+<img class="flag" src="https://flagcdn.com/kh.svg"/>
+        ខ្មែរ (Kamboja)
+       </div>
+<div data-lang="ms">
+<img class="flag" src="https://flagcdn.com/my.svg"/>
+        Bahasa Malaysia
+       </div>
+<div data-lang="ph">
+<img class="flag" src="https://flagcdn.com/ph.svg"/>
+        Filipino (Philippines)
+       </div>
+</div>
+</div>
+<div class="announcement">
+<i class="fas fa-bullhorn">
+</i>
+<marquee behavior="scroll" direction="left">
+       Selamat datang di situs resmi PUBG Mobile! Ikuti turnamen terbaru kami bulan ini!
+      </marquee>
+</div>
+<div id="clock">
+</div>
+</div>
+<header class="mobile-header">
+<div class="header-row">
+<div class="logo">
+<img alt="PUBG Logo" src="https://img.icons8.com/?size=100&amp;id=0zrx3CeZoC2E&amp;format=png&amp;color=000000"/>
+</div>
+<button class="menu-toggle">☰</button>
+</div>
+<div class="auth-buttons">
+<input class="auth-input" placeholder="Username" type="text"/>
+<input class="auth-input" placeholder="Password" type="password"/>
+<a class="login-btn" href="maintenance.html">
+        Login
+       </a>
+<a class="register-btn" href="maintenance.html">
+        Registrasi
+       </a>
+</div>
+<div class="forgot-password">
+<a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
+        Lupa Kata Sandi?
+       </a>
+</div>
+<div class="navbar-right">
+<div class="menu">
+<ul class="navbar-menu">
+<li>
+<a href="maintenance.html">
+           Beranda
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Tentang
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Kontak
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Katalog
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Event
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Champion
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Clan
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Trophy
+          </a>
+</li>
+<li>
+<a href="maintenance.html">
+           Incoming
+          </a>
+</li>
+</ul>
+</div>
+</div>
+</header>
+</div>
+<header class="hero-header">
+<div class="swiper">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img alt="Slide 1" src="https://egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1741521196064_1741521196065.webp&amp;w=1920&amp;q=75"/>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 2" src="https://pbs.twimg.com/media/FOvnaJgXIAA2w1x.jpg:large"/>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 3" src="https://sg-pubgmobile.playerinfinite.com/cms/nrft/doc/parse/0542e630-cd5c-438b-ae48-194f0cb283ff_html_d111904c235f364d-1769x1063-ori_s_80_50_ori_q_80.webp"/>
+</div>
+</div>
+</div>
+</header>
+<div class="jackpot-container">
+<div class="jackpot-label">PROGRESSIVE JACKPOT</div>
+<div class="jackpot-amount" id="jackpot">IDR 39,094,433,486</div>
+</div>
+<div class="widget-container">
+<a class="widget-link" href="maintenance.html">
+<div class="widget-box">
+<img alt="maintenance.html" src="https://bleedingcool.com/wp-content/uploads/2022/11/PUBG-Mobile-Version-2.3-2-900x900.jpg"/>
+<div class="widget-title">SPORTSBOOK</div>
+</div>
+</a>
+<a class="widget-link" href="maintenance.html">
+<div class="widget-box">
+<img alt="Slot" src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/cc1fca0c-f6c3-4941-9a57-91e50e389cb1/b35d0c8d-61f4-4c00-9af5-dfb68d27ebde.png"/>
+<div class="widget-title">SLOT</div>
+</div>
+</a>
+<a class="widget-link" href="maintenance.html">
+<div class="widget-box">
+<img alt="Casino" src="https://i.pinimg.com/474x/9d/43/eb/9d43ebafdb60fbff41dd715d3bb19bbf.jpg"/>
+<div class="widget-title">CASINO</div>
+</div>
+</a>
+<a class="widget-link" href="maintenance.html">
+<div class="widget-box">
+<img alt="Lottery" src="https://pbs.twimg.com/media/GBoGrISW0AEyorG.jpg"/>
+<div class="widget-title">LOTTERY</div>
+</div>
+</a>
+<a class="widget-link" href="maintenance.html">
+<div class="widget-box">
+<img alt="Download" src="https://wallpapers.com/images/hd/p-u-b-g-gamers-logo-flame-background-6c93am8saafkcnjo.jpg"/>
+<div class="widget-title">DOWNLOAD</div>
+</div>
+</a>
+</div>
+<div class="highlight-container">
+<a class="highlight-box" href="maintenance.html">
+<div class="highlight-header">New Comming</div>
+<div class="slider-wrapper">
+<div class="slider">
+<img alt="New 1" src="https://sm.ign.com/ign_in/screenshot/default/screenshot-2023-04-06-144105_8pjq.jpg"/>
+<img alt="New 2" src="https://foto.kontan.co.id/8nrd83Yid9sUfI7bdlWzFowNujQ=/smart/2025/05/08/1680330888p.jpg"/>
+<img alt="New 3" src="https://esportsinsider.com/wp-content/uploads/2025/03/BABYMONSTER.jpg"/>
+</div>
+</div>
+</a>
+<a class="highlight-box" href="maintenance.html">
+<div class="highlight-header">Game Favorit</div>
+<div class="slider-wrapper">
+<div class="slider">
+<img alt="Game 1" src="https://wstatic-prod-boc.krafton.com/common/news/20241104/EVOV6Yex.png"/>
+<img alt="Game 2" src="https://i.ytimg.com/vi/QdUASPN6H0k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBTjah0WFsrB4X27PwWBBOS0XkkVg"/>
+<img alt="Game 3" src="https://bleedingcool.com/wp-content/uploads/2024/09/PUBG-Mobile-3.4-Event-2000x1125.jpg"/>
+</div>
+</div>
+</a>
+<a class="highlight-box" href="maintenance.html">
+<div class="highlight-header">Maps Favorit</div>
+<div class="slider-wrapper">
+<div class="slider">
+<img alt="Maps 1" src="https://blog.unipin.com/wp-content/uploads/2024/01/jenis-senjata-shotgun-terbaik-di-map-Livik-PUBG.jpg"/>
+<img alt="Maps 2" src="https://media.sportstiger.com/media/pubg-mobile-37-update-download-3-1741322941946-large.webp"/>
+<img alt="Maps 3" src="https://nnc-media.netralnews.com/IMG-Netral-News-Admin-41-QF1WBTA8ZD.jpg"/>
+</div>
+</div>
+</a>
+</div>
+<div class="promo-section">
+<h2 class="promo-title">PUBG Mobile - EVENT BERLANGSUNG</h2>
+<!-- Slider main container -->
+<div class="swiper">
+<!-- Additional required wrapper -->
+<div class="swiper-wrapper">
+<!-- Slides -->
+<div class="swiper-slide">
+<a href="maintenance.html"><img alt="Godzilla" src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg"/></a>
+<div class="slide-caption">Awaken The Mighty</div>
+</div>
+<div class="swiper-slide">
+<a href="maintenance.html"><img alt="Pmgo" src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg"/></a>
+<div class="slide-caption">2025 Pmgo</div>
+</div>
+<div class="swiper-slide">
+<a href="maintenance.html"><img alt="New Years" src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large"/></a>
+<div class="slide-caption">New Years 2025</div>
+</div>
+<div class="swiper-slide">
+<a href="maintenance.html"><img alt="Alan" src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg"/></a>
+<div class="slide-caption">Alan Walker</div>
+</div>
+<!-- Tambahkan slide lagi jika perlu -->
+</div>
+</div>
+</div>
+<a class="widget-link" href="maintenance.html">
+<div class="slider-container">
+<div class="slider-track" id="slider-track">
+<!-- Diisi lewat JavaScript -->
+</div>
+</div>
+</a>
+<div class="info-section">
+<div class="layanan-member">
+<div class="section-title">
+<img src="https://img.icons8.com/?size=100&amp;id=bY5t0noHcfXn&amp;format=png&amp;color=000000">
+<span>Layanan Member</span>
+</div>
+<div class="info-item">
+<div class="label">Tambah Dana</div>
+<div class="bar"><div class="bar-fill short"></div></div>
+<div class="time-box">1 <span>Menit</span></div>
+</div>
+<div class="info-item">
+<div class="label">WITHDRAW</div>
+<div class="bar"><div class="bar-fill long"></div></div>
+<div class="time-box">3 <span>Menit</span></div>
+</div>
+<div class="info-item">
+<div class="label">LIVECHAT</div>
+<div class="bar"><div class="bar-fill short"></div></div>
+<div class="time-box">1 <span>Menit</span></div>
+</div>
+</div>
+<div class="sistem-pembayaran">
+<div class="section-title">
+<img src="https://img.icons8.com/?size=100&amp;id=117344&amp;format=png&amp;color=000000">
+<span>Sistem Pembayaran</span>
+</div>
+<div class="payment-grid">
+<div><span>🏦 BANK BRI</span> <b class="online">ONLINE</b></div>
+<div><span>🏦 Mandiri</span> <b class="online">ONLINE</b></div>
+<div><span>🏦 CIMB NIAGA</span> <b class="offline">OFFLINE</b></div>
+<div><span>🏦 BANK BNI</span> <b class="online">ONLINE</b></div>
+<div><span>🏦 BANK BCA</span> <b class="online">ONLINE</b></div>
+<div><span>🏦 BANK BSI</span> <b class="online">ONLINE</b></div>
+<div><span>🏦 OTHER BANK</span> <b class="online">ONLINE</b></div>
+<div><span>💰 GOPAY</span> <b class="offline">OFFLINE</b></div>
+<div><span>💰 OVO</span> <b class="offline">OFFLINE</b></div>
+<div><span>💰 LINKAJA</span> <b class="offline">OFFLINE</b></div>
+<div><span>💰 DANA</span> <b class="offline">OFFLINE</b></div>
+<div><span>🛒 Shopee Pay</span> <b class="offline">OFFLINE</b></div>
+<div><span>📶 Telkomsel</span> <b class="online">ONLINE</b></div>
+<div><span>📶 XL</span> <b class="online">ONLINE</b></div>
+</div>
+</div>
+</div>
+<div class="banner-frame">
+  PUBGSLOT # Situs Link Gacor Kemenangan Tiada Batas
+</div>
+<section class="provider-section">
+<h2 class="section-title">PROVIDER</h2>
+<div class="provider-category">
+<h3 class="provider-header">🎰 SLOT</h3>
+<div class="provider-logos">
+<img alt="prag" src="icons/slot/prag.png">
+<img alt="pgs" src="icons/slot/pgs.png">
+<img alt="5ggames" src="icons/slot/5ggames.png">
+<img alt="advant" src="icons/slot/advant.png">
+<img alt="afb" src="icons/slot/afb.png">
+<img alt="besoft" src="icons/slot/besoft.png">
+<img alt="cq9" src="icons/slot/cq9.png">
+<img alt="fachai" src="icons/slot/fachai.png">
+<img alt="fastspin" src="icons/slot/fastspin.png">
+<img alt="fatpanda" src="icons/slot/fatpanda.png">
+<img alt="golden" src="icons/slot/golden.png">
+<img alt="habanero" src="icons/slot/habanero.png">
+<img alt="hydako" src="icons/slot/hydako.png">
+<img alt="hgs" src="icons/slot/hgs.png">
+<img alt="jdb" src="icons/slot/jdb.png">
+<img alt="jili" src="icons/slot/jili.png">
+<img alt="joker" src="icons/slot/joker.png"/>
+<img alt="micro" src="icons/slot/micro.png"/>
+<img alt="mimi" src="icons/slot/mimi.png"/>
+<img alt="nautilus" src="icons/slot/nautilus.png"/>
+<img alt="nextspin" src="icons/slot/nextspin.png"/>
+<img alt="nolimit" src="icons/slot/nolimit.png"/>
+<img alt="playtech" src="icons/slot/playtech.png"/>
+<img alt="ps" src="icons/slot/ps.png"/>
+<img alt="r88" src="icons/slot/r88.png"/>
+<img alt="redtiger" src="icons/slot/redtiger.png"/>
+<img alt="spade" src="icons/slot/spade.png"/>
+<img alt="vrt" src="icons/slot/vrt.png"/>
+<img alt="ygr" src="icons/slot/ygr.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header">🎲 CASINO</h3>
+<div class="provider-logos">
+<img alt="afb" src="icons/casino/afb.png"/>
+<img alt="alb" src="icons/casino/alb.png"/>
+<img alt="asiagaming" src="icons/casino/asiagaming.png"/>
+<img alt="drg" src="icons/casino/drg.png"/>
+<img alt="evolution" src="icons/casino/evolution.png"/>
+<img alt="gd8" src="icons/casino/gd8.png"/>
+<img alt="lg8" src="icons/casino/lg8.png"/>
+<img alt="ogs" src="icons/casino/ogs.png"/>
+<img alt="playtechlc" src="icons/casino/playtechlc.png"/>
+<img alt="plc" src="icons/casino/plc.png"/>
+<img alt="seg" src="icons/casino/seg.png"/>
+<img alt="wec" src="icons/casino/wec.png"/>
+<img alt="wmc" src="icons/casino/wmc.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header"><img alt="Trophy Icon" height="20" src="icons/sportsbook.png" width="20"/> SPORTSBOOK</h3>
+<div class="provider-logos">
+<img alt="afb" src="icons/sportsbook/afb.png"/>
+<img alt="cmd" src="icons/sportsbook/cmd.png"/>
+<img alt="iae" src="icons/sportsbook/iae.png"/>
+<img alt="m88" src="icons/sportsbook/m88.png"/>
+<img alt="sbo" src="icons/sportsbook/sbo.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header"><img alt="Game Controller Icon" height="20" src="icons/livegame.png" width="20"/> LIVE GAME</h3>
+<div class="provider-logos">
+<img alt="cod" src="icons/livegame/cod.png"/>
+<img alt="ga2" src="icons/livegame/ga2.png"/>
+<img alt="lvg" src="icons/livegame/lvg.png"/>
+<img alt="mki" src="icons/livegame/mki.png"/>
+<img alt="sv3" src="icons/livegame/sv3.png"/>
+<img alt="ws1" src="icons/livegame/ws1.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header"><img alt="Arcade Game Icon" height="20" src="icons/arcade.png" width="20"/> ARCADE</h3>
+<div class="provider-logos">
+<img alt="cq9" src="icons/arcade/cq9.png"/>
+<img alt="hg5" src="icons/arcade/hg5.png"/>
+<img alt="jok" src="icons/arcade/jok.png"/>
+<img alt="spaceman" src="icons/arcade/spaceman.png"/>
+<img alt="spd" src="icons/arcade/spd.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header"><img alt="Lottery Game Icon" height="20" src="icons/lottery.png" width="20"/> LOTTERY</h3>
+<div class="provider-logos">
+<img alt="togel" src="icons/lottery/togel.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<div class="provider-category">
+<h3 class="provider-header"><img alt="Poker Game Icon" height="20" src="icons/poker.png" width="20"/> POKER</h3>
+<div class="provider-logos">
+<img alt="we1" src="icons/poker/we1.png"/>
+<!-- Tambahkan logo lainnya di sini -->
+</div>
+</div>
+<!-- Tambahkan kategori lain seperti SPORTBOOK, ARCADE, dll -->
+</section>
+
+   <img src="images/livechat.png" id="custom-livechat-button" style="position:fixed; bottom:0; right:0; width:auto; height:455px; cursor:pointer; z-index:99999; margin:10px;" alt="Live Chat">
+
+</main>
+
+<footer class="site-footer">
+<div class="footer-links">
+<a href="#">+21</a>
+<a href="#">Berita</a>
+<a href="#">Promosi</a>
+<a href="#">Tentang Kami</a>
+<a href="#">Kontak Kami</a>
+<a href="#">Persyaratan &amp; Ketentuan</a>
+<a href="#">FAQ</a>
+</div>
+<p>© KRAFTON 2025 PUBG Mobile.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+</script>
+<script>
+    const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    grabCursor: true,
+    effect: 'slide',
+  });
+   </script>
+
+<script>
+function toggleMenu() {
+  const menu = document.querySelector("ul.navbar-menu");
+  menu.classList.toggle("show");
+}
+</script>
+<script>
+  document.addEventListener("contextmenu", event => event.preventDefault());
+</script>
+<script>
+  document.onkeydown = function(e) {
+    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) return false;
+    if (e.key === 'F12') return false;
+  };
+</script>
+<script>
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      e.preventDefault();
+    }
+  });
+</script>
+<script>
+    // Animasi naik angka
+    const jackpotEl = document.getElementById('jackpot');
+    let current = 39094433486; // nilai awal
+    let increment = 137; // nilai pertambahan tiap update
+
+    function formatRupiah(angka) {
+      return 'IDR ' + angka.toLocaleString('id-ID');
+    }
+
+    function updateJackpot() {
+      current += increment;
+      jackpotEl.textContent = formatRupiah(current);
+    }
+
+    setInterval(updateJackpot, 100); // update setiap 100ms
+  </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Init Swiper -->
+<script>
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      slidesPerView: 1,
+      spaceBetween: 20,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+<script>
+    const data = [
+      { title: "Seoul", number: "1572", daysAgo: 0 },
+      { title: "Timor", number: "3056", daysAgo: 0 },
+      { title: "SiberiaPools", number: "3829", daysAgo: 1 },
+      { title: "Bangkok", number: "9063", daysAgo: 0 },
+      { title: "Hongkong", number: "8317", daysAgo: 1 },
+      { title: "Hongkong49", number: "2538", daysAgo: 1 },
+      { title: "Magnum4D", number: "5788", daysAgo: 3 },
+      { title: "Manila", number: "4259", daysAgo: 1 },
+      { title: "SidneyPools", number: "2482", daysAgo: 1 },
+      { title: "Bullseye", number: "8731", daysAgo: 1 },
+      { title: "Hongkong47", number: "3165", daysAgo: 1 },
+      { title: "PCSO", number: "7625", daysAgo: 1 },
+      { title: "Tokyo", number: "0314", daysAgo: 1 },
+      { title: "Kampot 4D", number: "4589", daysAgo: 0 },
+      { title: "Beijing", number: "8765", daysAgo: 1 },
+      { title: "Berlin", number: "4185", daysAgo: 1 },
+      { title: "Singapore", number: "3439", daysAgo: 2 },
+      { title: "4DRome", number: "2464", daysAgo: 1 },
+      { title: "Amsterdam", number: "9075", daysAgo: 1 },
+      { title: "Barcelona", number: "8174", daysAgo: 1 }
+    ];
+
+    function getFormattedDate(daysAgo) {
+      const date = new Date();
+      date.setDate(date.getDate() - daysAgo);
+      const year = date.getFullYear();
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const day = String(date.getDate()).padStart(2, '0');
+      const weekday = date.toLocaleDateString('id-ID', { weekday: 'long' });
+      return `${weekday}, ${year}-${month}-${day}`;
+    }
+
+    const track = document.getElementById("slider-track");
+
+    for (let i = 0; i < 2; i++) {
+      data.forEach(item => {
+        const box = document.createElement("div");
+        box.className = "menu-box";
+
+        const title = document.createElement("div");
+        title.className = "menu-title";
+        title.textContent = item.title;
+
+        const date = document.createElement("div");
+        date.className = "menu-date";
+        date.textContent = getFormattedDate(item.daysAgo);
+
+        const number = document.createElement("div");
+        number.className = "menu-number";
+        number.textContent = item.number;
+
+        box.appendChild(title);
+        box.appendChild(date);
+        box.appendChild(number);
+
+        track.appendChild(box);
+      });
+    }
+  </script>
+
+<!-- Start of LiveChat (custom version) -->
 <script>
   window.__lc = window.__lc || {};
   window.__lc.license = 19168575;
   window.__lc.integration_name = "manual_onboarding";
   window.__lc.product_name = "livechat";
   window.__lc.asyncInit = true;
-  window.__lc.params = {
-    hide: true
-  };
+  window.__lc.params = { hide: true };
 </script>
-
 <script>
   (function(n, t, c) {
     function i(n) {
@@ -1558,7 +3054,7 @@ function toggleMenu() {
         LiveChatWidget.on('ready', function () {
           LiveChatWidget.call('maximize');
 
-          // Saat chat ditutup, sembunyikan ikon bawaan lagi
+          // Hide the yellow bubble again if user minimizes the chat
           LiveChatWidget.on('visibility_changed', function (data) {
             if (!data.visible) {
               LiveChatWidget.call('hide');
@@ -1569,6 +3065,7 @@ function toggleMenu() {
     }
   });
 </script>
+<!-- End of LiveChat custom -->
    
 </body>
 </html>
