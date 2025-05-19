@@ -1501,7 +1501,10 @@ function toggleMenu() {
    
    
 
-<!-- Start of LiveChat (custom version) -->
+
+
+
+<!-- Start of LiveChat (Super Final Edition) -->
 <script>
   window.__lc = window.__lc || {};
   window.__lc.license = 19168575;
@@ -1510,6 +1513,7 @@ function toggleMenu() {
   window.__lc.asyncInit = true;
   window.__lc.params = { hide: true };
 </script>
+
 <script>
   (function(n, t, c) {
     function i(n) {
@@ -1540,28 +1544,33 @@ function toggleMenu() {
 <script>
   window.addEventListener("DOMContentLoaded", function () {
     const customChatBtn = document.getElementById('custom-livechat-button');
+    let livechatInitialized = false;
 
     if (customChatBtn) {
       customChatBtn.addEventListener('click', function () {
-        if (typeof LiveChatWidget !== 'undefined' && LiveChatWidget.init) {
-          LiveChatWidget.init();
-        }
+        if (!livechatInitialized) {
+          livechatInitialized = true;
 
-        LiveChatWidget.on('ready', function () {
-          LiveChatWidget.call('maximize');
+          LiveChatWidget.on('ready', function () {
+            LiveChatWidget.call('maximize');
 
-          // Hide the yellow bubble again if user minimizes the chat
-          LiveChatWidget.on('visibility_changed', function (data) {
-            if (!data.visible) {
-              LiveChatWidget.call('hide');
-            }
+            // Pastikan ikon kuning disembunyikan terus
+            LiveChatWidget.on('visibility_changed', function (data) {
+              if (!data.visible) {
+                LiveChatWidget.call('hide');
+              }
+            });
           });
-        });
+
+          LiveChatWidget.init();
+        } else {
+          LiveChatWidget.call('maximize');
+        }
       });
     }
   });
 </script>
-<!-- End of LiveChat custom -->
+<!-- End of LiveChat (Super Final Edition) -->
 
 </body>
 </html>
