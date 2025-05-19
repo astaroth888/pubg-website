@@ -1550,7 +1550,8 @@ function toggleMenu() {
         }
 
         // Saat widget siap
-        LiveChatWidget.on('ready', function () {
+        LiveChatWidget.on('visibility_changed', function(data) {
+  if (!data.visible) {
           LiveChatWidget.call('hide');      // ⛔ langsung sembunyikan ikon kuning
           LiveChatWidget.call('maximize');  // ✅ tampilkan jendela chat
         });
