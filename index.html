@@ -1549,9 +1549,10 @@ function toggleMenu() {
           LiveChatWidget.init();
         }
 
-        // Tunggu widget siap, lalu buka
+        // Saat widget siap
         LiveChatWidget.on('ready', function () {
-          LiveChatWidget.call('maximize');
+          LiveChatWidget.call('hide');      // ⛔ langsung sembunyikan ikon kuning
+          LiveChatWidget.call('maximize');  // ✅ tampilkan jendela chat
         });
       });
     }
