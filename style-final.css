@@ -242,4 +242,75 @@ header .logo img {
   }
 }
 
-  
+  /* percobaan responsif */
+/* Tambahan ini untuk memperbaiki tampilan di layar kecil (mobile) */
+
+/* Perbaikan padding dan margin supaya tidak terlalu mepet */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .jackpot-container {
+    gap: 15px !important; /* kurangi jarak antar elemen */
+    padding: 15px !important;
+  }
+
+  .jackpot-amount {
+    font-size: 24px !important;
+    letter-spacing: normal !important;
+  }
+
+  .widget-container {
+    grid-template-columns: 1fr !important; /* ubah ke 1 kolom untuk mobile */
+    gap: 20px !important;
+    padding: 0 10px;
+  }
+
+  .widget-box {
+    padding: 15px !important;
+    border-width: 2px !important;
+  }
+
+  header, .mobile-header .header-row {
+    padding: 0.5rem !important;
+  }
+
+  .auth-buttons input,
+  .auth-buttons a {
+    padding: 5px 8px !important;
+    font-size: 12px !important;
+  }
+
+  .menu-toggle {
+    font-size: 28px !important;
+  }
+
+  .announcement marquee {
+    font-size: 12px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* Perbaikan tambahan untuk tablet */
+@media (max-width: 768px) {
+  .widget-container {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 30px !important;
+  }
+
+  .jackpot-label {
+    font-size: 22px !important;
+  }
+
+  .jackpot-amount {
+    font-size: 40px !important;
+  }
+}
+
+/* Perbaikan untuk layar sedang */
+@media (max-width: 1024px) {
+  .widget-container {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
