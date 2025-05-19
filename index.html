@@ -18,7 +18,20 @@
 <meta content="website" property="og:type"/>
 <link href="https://www.memanjakandiri.xyz/" rel="canonical">
 <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="responsive-fixes.css" rel="stylesheet"/>
+<link href="style-final.css" rel="stylesheet"/>
+
 <style>
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
    * {
       margin: 0; padding: 0; box-sizing: border-box;
     }
@@ -232,7 +245,6 @@
       }
     }
     
-    <style>
     body {
       background-color: #000;
       font-family: Arial, sans-serif;
@@ -346,9 +358,8 @@
         flex-direction: column;
       }
     }
-  </style>
-<title>Menu Bergerak Otomatis Responsif</title>
-<style>
+    
+/* Menu Bergerak Otomatis Responsif */
   .slider-container {
       width: 100%;
       overflow: hidden;
@@ -417,9 +428,8 @@
         padding: 6px 0;
       }
     }
-  </style>
-<title>Menu Pembayaran</title>
-<style>
+    
+  /* Menu Pembayaran */
   .info-section {
   display: flex;
   flex-wrap: wrap;
@@ -516,16 +526,13 @@
 .offline {
   color: #ff3c3c;
 }
-</style>
-<style>
   .widget-link {
   text-decoration: none;
   color: inherit;
   display: block;
 }
-</style>
-<title>Menu Mengenai Situs</title>
-<style>
+
+/* Menu Mengenai Situs */
 .info-table-container {
   width: 90%;
   max-width: 1200px;
@@ -568,10 +575,8 @@
   text-align: left;
   color: #fff;
 }
-</style>
 
-<title>PUBGSLOT # Situs Link Gacor</title>
-<style>
+/* PUBGSLOT # Situs Link Gacor */
 .banner-frame {
   background-color: #000; /* latar belakang hitam */
   color: #FFD700; /* teks kuning keemasan */
@@ -585,9 +590,8 @@
   max-width: 100%;
   font-family: 'Orbitron', sans-serif; /* gunakan Orbitron jika ingin efek seperti di gambar */
 }
-</style>
-<title>Icon Provider</title>
-<style>
+
+/* Icon Provider */
 .provider-section {
   background: #000;
   color: #fff;
@@ -654,9 +658,8 @@
     height: 25px;
   }
 }
-</style>
-<title>Tautan Teks Akhir</title>
-<style>
+
+/* Tautan Teks Akhir */
 .site-footer {
   background-color: #000;
   padding: 20px 0;
@@ -675,8 +678,7 @@
 .footer-links a:hover {
   text-decoration: none;
 }
-</style>
-<style>
+
   .promo-title {
   margin-top: 50px; /* Geser ke bawah */
   text-align: center;
@@ -684,8 +686,7 @@
   font-weight: bold;
   color: #FFD700;
 }
-</style>
-<style>
+
     main {
       padding: 2rem;
       max-width: 100%;
@@ -802,7 +803,6 @@
   text-decoration: underline;
 }
   
-
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -863,7 +863,6 @@ footer {
   }
 }
 
-
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -907,8 +906,7 @@ ul.navbar-menu li a {
     display: flex;
   }
 }
-</style>
-<style>
+
    html, body {
   height: 100%;
   margin: 0;
@@ -980,8 +978,6 @@ main {
 }
 </style>
 
-<link href="responsive-fixes.css" rel="stylesheet"/>
-<link href="style-final.css" rel="stylesheet"/>
 </head>
 <body>
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
@@ -1437,6 +1433,10 @@ main {
 function toggleMenu() {
   const menu = document.querySelector("ul.navbar-menu");
   menu.classList.toggle("show");
+}
+const toggleBtn = document.querySelector(".menu-toggle");
+if (toggleBtn) {
+  toggleBtn.addEventListener("click", toggleMenu);
 }
 </script>
 <script>
