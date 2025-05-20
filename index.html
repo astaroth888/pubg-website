@@ -1656,18 +1656,12 @@ if (toggleBtn) {
   };
 
   function changeLanguage(langCode) {
-    const iframe = document.querySelector('iframe.goog-te-banner-frame');
-    if (!iframe) {
-      const combo = document.querySelector('select.goog-te-combo');
-      if (combo) {
-        combo.value = langMap[langCode];
-        combo.dispatchEvent(new Event('change'));
-      } else {
-        // Tunggu sampai widget siap
-        setTimeout(() => changeLanguage(langCode), 500);
-      }
+    const combo = document.querySelector('select.goog-te-combo');
+    if (combo) {
+      combo.value = langMap[langCode];
+      combo.dispatchEvent(new Event('change'));
     } else {
-      // Tunggu frame selesai muncul
+      // Tunggu sampai widget siap
       setTimeout(() => changeLanguage(langCode), 500);
     }
   }
@@ -1679,7 +1673,6 @@ if (toggleBtn) {
     });
   });
 </script>
-
 
 </body>
 </html>
