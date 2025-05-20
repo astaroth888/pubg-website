@@ -1645,7 +1645,10 @@ if (toggleBtn) {
   });
 </script>
    
-   <script>
+   
+
+
+<script>
   const langMap = {
     id: 'id',
     en: 'en',
@@ -1657,24 +1660,31 @@ if (toggleBtn) {
   };
 
   function setLanguage(langCode) {
-    const trySet = () => {
-      const combo = document.querySelector('select.goog-te-combo');
-      if (combo) {
-        combo.value = langMap[langCode];
-        combo.dispatchEvent(new Event('change'));
-        return true;
+    const targetLang = langMap[langCode];
+
+    function tryTranslate() {
+      const iframe = document.querySelector('iframe');
+      if (iframe) {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const select = innerDoc.querySelector('.goog-te-combo');
+        if (select) {
+          select.value = targetLang;
+          select.dispatchEvent(new Event('change'));
+          return true;
+        }
       }
       return false;
-    };
+    }
 
-    // Coba langsung, kalau belum bisa, coba 5x setiap 500ms
     let attempts = 0;
+    const maxAttempts = 10;
     const interval = setInterval(() => {
       attempts++;
-      if (trySet() || attempts >= 5) {
+      const success = tryTranslate();
+      if (success || attempts >= maxAttempts) {
         clearInterval(interval);
       }
-    }, 500);
+    }, 700);
   }
 
   document.addEventListener('DOMContentLoaded', () => {
