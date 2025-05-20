@@ -2,6 +2,20 @@
 
 <html lang="id">
 <head>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id',
+      includedLanguages: 'id,en,zh,th,km,ms,ph',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <meta charset="utf-8"/>
 <link href="icons/favicon.png" rel="icon" type="image/png"/>
 <title>
@@ -255,7 +269,7 @@
 
     .widget-container {
       max-width: 1200px;
-      margin: 50px auto;
+      margin: auto;
       padding: 10px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -296,7 +310,7 @@
       display: flex;
       justify-content: space-between;
       gap: 20px;
-      margin-top: 30px;
+      margin-top: auto;
     }
 
     .highlight-box {
@@ -980,6 +994,9 @@ main {
 
 </head>
 <body>
+
+<div id="google_translate_element" style="display: none;"></div>
+
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
@@ -997,7 +1014,7 @@ main {
 <img class="flag" src="https://flagcdn.com/gb.svg"/>
         English
        </div>
-<div data-lang="zh">
+<div data-lang="zh-CH">
 <img class="flag" src="https://flagcdn.com/cn.svg"/>
         中文
        </div>
@@ -1013,7 +1030,7 @@ main {
 <img class="flag" src="https://flagcdn.com/my.svg"/>
         Bahasa Malaysia
        </div>
-<div data-lang="ph">
+<div data-lang="tl">
 <img class="flag" src="https://flagcdn.com/ph.svg"/>
         Filipino (Philippines)
        </div>
@@ -1615,5 +1632,23 @@ if (toggleBtn) {
   });
 </script>
    
+   <script>
+  function triggerGoogleTranslate(lang) {
+    const select = document.querySelector('select.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+  }
+
+  // Pasang event ke dropdown kamu
+  document.querySelectorAll('#language-list div').forEach(item => {
+    item.addEventListener('click', () => {
+      const lang = item.getAttribute('data-lang');
+      triggerGoogleTranslate(lang);
+    });
+  });
+</script>
+
 </body>
 </html>
