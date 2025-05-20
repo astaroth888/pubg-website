@@ -3,19 +3,6 @@
 <html lang="id">
 <head>
 
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'id',
-      includedLanguages: 'id,en,zh,th,km,ms,ph',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <meta charset="utf-8"/>
 <link href="icons/favicon.png" rel="icon" type="image/png"/>
 <title>
@@ -995,21 +982,6 @@ main {
 </head>
 <body>
 
-<div id="google_translate_element" style="display:none;"></div>
-
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'id',
-      includedLanguages: 'id,en,zh-CN,th,km,ms,tl',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-</script>
-
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
@@ -1642,58 +1614,6 @@ if (toggleBtn) {
         });
       });
     }
-  });
-</script>
-   
-   
-
-
-<script>
-  const langMap = {
-    id: 'id',
-    en: 'en',
-    zh: 'zh-CN',
-    th: 'th',
-    km: 'km',
-    ms: 'ms',
-    ph: 'tl'
-  };
-
-  function setLanguage(langCode) {
-    const targetLang = langMap[langCode];
-
-    function tryTranslate() {
-      const iframe = document.querySelector('iframe');
-      if (iframe) {
-        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-        const select = innerDoc.querySelector('.goog-te-combo');
-        if (select) {
-          select.value = targetLang;
-          select.dispatchEvent(new Event('change'));
-          return true;
-        }
-      }
-      return false;
-    }
-
-    let attempts = 0;
-    const maxAttempts = 10;
-    const interval = setInterval(() => {
-      attempts++;
-      const success = tryTranslate();
-      if (success || attempts >= maxAttempts) {
-        clearInterval(interval);
-      }
-    }, 700);
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#language-list div').forEach(item => {
-      item.addEventListener('click', () => {
-        const lang = item.getAttribute('data-lang');
-        setLanguage(lang);
-      });
-    });
   });
 </script>
 
