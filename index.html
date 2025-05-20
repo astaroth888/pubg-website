@@ -1465,6 +1465,26 @@ if (toggleBtn) {
     }
   });
 </script>
+
+<script>
+function updateClock() {
+      const now = new Date();
+      const wibTime = new Date(now.getTime() + (7 * 60 * 60 * 1000));
+      const hours = String(wibTime.getUTCHours()).padStart(2, '0');
+      const minutes = String(wibTime.getUTCMinutes()).padStart(2, '0');
+      const seconds = String(wibTime.getUTCSeconds()).padStart(2, '0');
+      const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+      const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+      const day = days[wibTime.getUTCDay()];
+      const date = wibTime.getUTCDate();
+      const month = months[wibTime.getUTCMonth()];
+      const year = wibTime.getUTCFullYear();
+      document.getElementById('clock').textContent = `${day}, ${date} ${month} ${year} WIB: ${hours}:${minutes}:${seconds}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+    </script>
+    
 <script>
     // Animasi naik angka
     const jackpotEl = document.getElementById('jackpot');
