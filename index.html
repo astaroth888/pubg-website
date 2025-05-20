@@ -995,7 +995,7 @@ main {
 </head>
 <body>
 
-<div id="google_translate_element" style="display: none;"></div>
+<div id="google_translate_element" style="display:none;"></div>
 
 <script type="text/javascript">
   function googleTranslateElementInit() {
@@ -1007,6 +1007,7 @@ main {
     }, 'google_translate_element');
   }
 </script>
+
 <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
@@ -1026,7 +1027,7 @@ main {
 <img class="flag" src="https://flagcdn.com/gb.svg"/>
         English
        </div>
-<div data-lang="zh-CH">
+<div data-lang="zh">
 <img class="flag" src="https://flagcdn.com/cn.svg"/>
         中文
        </div>
@@ -1042,7 +1043,7 @@ main {
 <img class="flag" src="https://flagcdn.com/my.svg"/>
         Bahasa Malaysia
        </div>
-<div data-lang="tl">
+<div data-lang="ph">
 <img class="flag" src="https://flagcdn.com/ph.svg"/>
         Filipino (Philippines)
        </div>
@@ -1655,21 +1656,33 @@ if (toggleBtn) {
     ph: 'tl'
   };
 
-  function changeLanguage(langCode) {
-    const combo = document.querySelector('select.goog-te-combo');
-    if (combo) {
-      combo.value = langMap[langCode];
-      combo.dispatchEvent(new Event('change'));
-    } else {
-      // Tunggu sampai widget siap
-      setTimeout(() => changeLanguage(langCode), 500);
-    }
+  function setLanguage(langCode) {
+    const trySet = () => {
+      const combo = document.querySelector('select.goog-te-combo');
+      if (combo) {
+        combo.value = langMap[langCode];
+        combo.dispatchEvent(new Event('change'));
+        return true;
+      }
+      return false;
+    };
+
+    // Coba langsung, kalau belum bisa, coba 5x setiap 500ms
+    let attempts = 0;
+    const interval = setInterval(() => {
+      attempts++;
+      if (trySet() || attempts >= 5) {
+        clearInterval(interval);
+      }
+    }, 500);
   }
 
-  document.querySelectorAll('#language-list div').forEach(item => {
-    item.addEventListener('click', () => {
-      const lang = item.getAttribute('data-lang');
-      changeLanguage(lang);
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#language-list div').forEach(item => {
+      item.addEventListener('click', () => {
+        const lang = item.getAttribute('data-lang');
+        setLanguage(lang);
+      });
     });
   });
 </script>
