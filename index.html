@@ -997,6 +997,18 @@ main {
 
 <div id="google_translate_element" style="display: none;"></div>
 
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'id',
+      includedLanguages: 'id,en,zh-CN,th,km,ms,tl',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
@@ -1633,22 +1645,41 @@ if (toggleBtn) {
 </script>
    
    <script>
-  function triggerGoogleTranslate(lang) {
-    const select = document.querySelector('select.goog-te-combo');
-    if (select) {
-      select.value = lang;
-      select.dispatchEvent(new Event('change'));
+  const langMap = {
+    id: 'id',
+    en: 'en',
+    zh: 'zh-CN',
+    th: 'th',
+    km: 'km',
+    ms: 'ms',
+    ph: 'tl'
+  };
+
+  function changeLanguage(langCode) {
+    const iframe = document.querySelector('iframe.goog-te-banner-frame');
+    if (!iframe) {
+      const combo = document.querySelector('select.goog-te-combo');
+      if (combo) {
+        combo.value = langMap[langCode];
+        combo.dispatchEvent(new Event('change'));
+      } else {
+        // Tunggu sampai widget siap
+        setTimeout(() => changeLanguage(langCode), 500);
+      }
+    } else {
+      // Tunggu frame selesai muncul
+      setTimeout(() => changeLanguage(langCode), 500);
     }
   }
 
-  // Pasang event ke dropdown kamu
   document.querySelectorAll('#language-list div').forEach(item => {
     item.addEventListener('click', () => {
       const lang = item.getAttribute('data-lang');
-      triggerGoogleTranslate(lang);
+      changeLanguage(lang);
     });
   });
 </script>
+
 
 </body>
 </html>
