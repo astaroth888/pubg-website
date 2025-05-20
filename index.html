@@ -197,54 +197,72 @@
   background-color: transparent;
 }
 
- @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+ .jackpot-container {
+  background-color: #111;
+  border-radius: 35px;
+  padding: 28px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 5px rgba(255, 215, 0, 0.2),
+    inset 0 0 8px #000,
+    0 0 20px #FFD700,
+    0 0 60px rgba(255, 215, 0, 0.3),
+    0 0 100px rgba(255, 215, 0, 0.15);
+}
 
-    .jackpot-container {
-      background-color: #000;
-      border: 10px solid #FFD700;
-      border-radius: 50px;
-      padding: 30px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 150px;
-      font-family: 'Share Tech Mono', monospace;
-      box-shadow: 0 0 30px #FFD700;
-      max-width: 100%;
-      margin: 10px;
-    }
+.jackpot-container::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 45px;
+  background: radial-gradient(circle, rgba(255,215,0,0.4) 10%, transparent 70%);
+  animation: softGlow 4s ease-in-out infinite;
+  z-index: 0;
+}
 
-    .jackpot-label {
-      background-color: #FFD700;
-      color: #000;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 30px;
-      text-transform: uppercase;
-    }
+@keyframes softGlow {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.05); }
+}
 
-    .jackpot-amount {
-      color: #FFD700;
-      font-size: 65px;
-      letter-spacing: 2px;
-    }
+.jackpot-label {
+  background-color: #FFD700;
+  color: #000;
+  padding: 12px 26px;
+  border-radius: 12px;
+  font-weight: bold;
+  z-index: 1;
+  box-shadow: 0 0 10px #FFD700;
+}
 
-    @media (max-width: 600px) {
-      .jackpot-container {
-        flex-direction: column;
-        padding: 15px;
-        gap: 20px;
-      }
+.jackpot-amount {
+  font-size: 42px;
+  font-weight: bold;
+  color: #FFD700;
+  z-index: 1;
+  text-shadow: 0 0 6px #FFD700, 0 0 15px #FFD700;
+}
 
-      .jackpot-amount {
-        font-size: 28px;
-      }
+@media (max-width: 600px) {
+  .jackpot-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 
-      .jackpot-label {
-        font-size: 18px;
-      }
-    }
+  .jackpot-amount {
+    font-size: 30px;
+  }
+}
+
     
     body {
       background-color: #000;
@@ -979,6 +997,26 @@ main {
 }
 </style>
 
+
+<style>
+@keyframes dropCoin {
+  0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+  100% { transform: translateY(600px) rotate(360deg); opacity: 0; }
+}
+
+.coin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/138/138292.png');
+  background-size: cover;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  animation: dropCoin 3s linear infinite;
+}
+</style>
+
 </head>
 <body>
 
@@ -1093,7 +1131,7 @@ main {
 </header>
 <div class="jackpot-container">
 <div class="jackpot-label">PROGRESSIVE JACKPOT</div>
-<div class="jackpot-amount" id="jackpot">IDR 39,094,433,486</div>
+<div class="jackpot-amount" id="jackpot">IDR 0</div>
 </div>
 <div class="widget-container">
 <a class="widget-link" href="maintenance.html">
@@ -1585,6 +1623,56 @@ if (toggleBtn) {
       });
     }
   });
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.querySelector('.jackpot-container');
+  for (let i = 0; i < 15; i++) {
+    const coin = document.createElement('div');
+    coin.classList.add('coin');
+    coin.style.left = Math.random() * 100 + '%';
+    coin.style.animationDelay = (Math.random() * 5) + 's';
+    coin.style.top = '-50px';
+    container.appendChild(coin);
+  }
+});
+</script>
+
+<!-- Script animasi jackpot -->
+<script>
+function animateJackpot(start, end, duration) {
+  const jackpotElement = document.getElementById('jackpot');
+  let startTime = null;
+
+  function formatNumber(num) {
+    return "IDR " + num.toLocaleString("id-ID");
+  }
+
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const current = Math.floor(progress * (end - start) + start);
+    jackpotElement.textContent = formatNumber(current);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  }
+
+  window.requestAnimationFrame(step);
+}
+
+// 👉 Jalankan animasi pertama
+let currentJackpot = 39094452392;
+animateJackpot(0, currentJackpot, 2000);
+
+// 👉 Tambahkan update otomatis setiap 5 detik
+setInterval(() => {
+  const nextJackpot = currentJackpot + Math.floor(Math.random() * 10000 + 10000);
+  animateJackpot(currentJackpot, nextJackpot, 1500);
+  currentJackpot = nextJackpot;
+}, 5000);
 </script>
 
 </body>
