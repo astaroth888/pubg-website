@@ -1,438 +1,681 @@
 <!DOCTYPE html>
-
 <html lang="id">
-<head>
-
-<meta charset="utf-8"/>
-<link href="icons/favicon.png" rel="icon" type="image/png"/>
-<title>
+ <head>
+  <meta charset="utf-8"/>
+  <link href="icons/favicon.png" rel="icon" type="image/png"/>
+  <title>
    Komunitas PUBG Mobile | Memanjakan Diri
   </title>
-<meta content="Situs komunitas PUBG Mobile. Galeri, turnamen, dan informasi update seputar PUBG Indonesia." name="description"/>
-<meta content="PUBG Mobile, komunitas PUBG, turnamen PUBG, battle royale, game mobile, PUBG Indonesia" name="keywords"/>
-<meta content="memanjakandiri.xyz" name="author"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Komunitas PUBG Mobile | Memanjakan Diri" property="og:title"/>
-<meta content="Gabung komunitas PUBG Mobile, cek galeri dan turnamen terbaru." property="og:description"/>
-<meta content="https://www.memanjakandiri.xyz/images/banner.jpg" property="og:image"/>
-<meta content="https://www.memanjakandiri.xyz/" property="og:url"/>
-<meta content="website" property="og:type"/>
-<link href="https://www.memanjakandiri.xyz/" rel="canonical">
-<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
-<link href="main.css" rel="stylesheet"/>
-
-</head>
-<body>
-
-<main>
-<div class="sticky-header">
-<div class="top-container">
-<div class="dropdown-language">
-<div class="dropdown-button" id="selected-lang">
-<img class="flag" src="https://flagcdn.com/id.svg"/>
+  <meta content="Situs komunitas PUBG Mobile. Galeri, turnamen, dan informasi update seputar PUBG Indonesia." name="description"/>
+  <meta content="PUBG Mobile, komunitas PUBG, turnamen PUBG, battle royale, game mobile, PUBG Indonesia" name="keywords"/>
+  <meta content="memanjakandiri.xyz" name="author"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Komunitas PUBG Mobile | Memanjakan Diri" property="og:title"/>
+  <meta content="Gabung komunitas PUBG Mobile, cek galeri dan turnamen terbaru." property="og:description"/>
+  <meta content="https://www.memanjakandiri.xyz/images/banner.jpg" property="og:image"/>
+  <meta content="https://www.memanjakandiri.xyz/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <link href="https://www.memanjakandiri.xyz/" rel="canonical"/>
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+   <link href="main.css" rel="stylesheet"/>
+  </link>
+ </head>
+ <body>
+  <main>
+   <div class="sticky-header">
+    <div class="top-container">
+     <div class="dropdown-language">
+      <div class="dropdown-button" id="selected-lang">
+       <img class="flag" src="https://flagcdn.com/id.svg"/>
        Indonesia
       </div>
-</div>
-<div class="announcement">
-<i class="fas fa-bullhorn">
-</i>
-<marquee behavior="scroll" direction="left">
+     </div>
+     <div class="announcement">
+      <i class="fas fa-bullhorn">
+      </i>
+      <marquee behavior="scroll" direction="left">
        Selamat datang di situs resmi PUBG Mobile! Ikuti turnamen terbaru kami bulan ini!
       </marquee>
-</div>
-<div id="clock">
-</div>
-</div>
-<header class="mobile-header">
-<div class="header-row">
-<div class="logo">
-<img alt="PUBG Logo" src="images/logo.png"/>
-</div>
-<button class="menu-toggle">☰</button>
-</div>
-<div class="auth-buttons">
-<input class="auth-input" placeholder="Username" type="text"/>
-<input class="auth-input" placeholder="Password" type="password"/>
-<a class="login-btn" href="maintenance.html">
-        Login
+     </div>
+     <div id="clock">
+     </div>
+    </div>
+    <header class="mobile-header">
+     <div class="header-row">
+      <div class="logo">
+       <img alt="PUBG Logo" src="images/logo.png"/>
+      </div>
+      <button class="menu-toggle">
+       ☰
+      </button>
+     </div>
+     <div class="auth-buttons">
+      <input class="auth-input" placeholder="Username" type="text"/>
+      <input class="auth-input" placeholder="Password" type="password"/>
+      <a class="login-btn" href="maintenance.html">
+       Login
+      </a>
+      <a class="register-btn" href="maintenance.html">
+       Registrasi
+      </a>
+     </div>
+     <div class="forgot-password">
+      <a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
+       Lupa Kata Sandi?
+      </a>
+     </div>
+     <div class="navbar-right">
+      <div class="menu">
+       <ul class="navbar-menu">
+        <li>
+         <a href="maintenance.html">
+          Beranda
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Tentang
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Kontak
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Katalog
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Event
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Champion
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Clan
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Trophy
+         </a>
+        </li>
+        <li>
+         <a href="maintenance.html">
+          Incoming
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </header>
+   </div>
+   <header class="hero-header">
+    <div class="swiper">
+     <div class="swiper-wrapper">
+      <div class="swiper-slide">
+       <img alt="Slide 1" src="https://egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1741521196064_1741521196065.webp&amp;w=1920&amp;q=75"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Slide 2" src="https://pbs.twimg.com/media/FOvnaJgXIAA2w1x.jpg:large"/>
+      </div>
+      <div class="swiper-slide">
+       <img alt="Slide 3" src="https://sg-pubgmobile.playerinfinite.com/cms/nrft/doc/parse/0542e630-cd5c-438b-ae48-194f0cb283ff_html_d111904c235f364d-1769x1063-ori_s_80_50_ori_q_80.webp"/>
+      </div>
+     </div>
+    </div>
+   </header>
+   <div class="jackpot-container">
+    <div class="jackpot-label">
+     PROGRESSIVE JACKPOT
+    </div>
+    <div class="jackpot-amount" id="jackpot">
+     IDR 0
+    </div>
+   </div>
+   <div class="widget-container">
+    <a class="widget-link" href="maintenance.html">
+     <div class="widget-box">
+      <img alt="maintenance.html" src="https://bleedingcool.com/wp-content/uploads/2022/11/PUBG-Mobile-Version-2.3-2-900x900.jpg"/>
+      <div class="widget-title">
+       SPORTSBOOK
+      </div>
+     </div>
+    </a>
+    <a class="widget-link" href="maintenance.html">
+     <div class="widget-box">
+      <img alt="Slot" src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/cc1fca0c-f6c3-4941-9a57-91e50e389cb1/b35d0c8d-61f4-4c00-9af5-dfb68d27ebde.png"/>
+      <div class="widget-title">
+       SLOT
+      </div>
+     </div>
+    </a>
+    <a class="widget-link" href="maintenance.html">
+     <div class="widget-box">
+      <img alt="Casino" src="https://i.pinimg.com/474x/9d/43/eb/9d43ebafdb60fbff41dd715d3bb19bbf.jpg"/>
+      <div class="widget-title">
+       CASINO
+      </div>
+     </div>
+    </a>
+    <a class="widget-link" href="maintenance.html">
+     <div class="widget-box">
+      <img alt="Lottery" src="https://pbs.twimg.com/media/GBoGrISW0AEyorG.jpg"/>
+      <div class="widget-title">
+       LOTTERY
+      </div>
+     </div>
+    </a>
+    <a class="widget-link" href="maintenance.html">
+     <div class="widget-box">
+      <img alt="Download" src="https://wallpapers.com/images/hd/p-u-b-g-gamers-logo-flame-background-6c93am8saafkcnjo.jpg"/>
+      <div class="widget-title">
+       DOWNLOAD
+      </div>
+     </div>
+    </a>
+   </div>
+   <div class="highlight-container">
+    <a class="highlight-box" href="maintenance.html">
+     <div class="highlight-header">
+      New Comming
+     </div>
+     <div class="slider-wrapper">
+      <div class="slider">
+       <img alt="New 1" src="https://sm.ign.com/ign_in/screenshot/default/screenshot-2023-04-06-144105_8pjq.jpg"/>
+       <img alt="New 2" src="https://foto.kontan.co.id/8nrd83Yid9sUfI7bdlWzFowNujQ=/smart/2025/05/08/1680330888p.jpg"/>
+       <img alt="New 3" src="https://esportsinsider.com/wp-content/uploads/2025/03/BABYMONSTER.jpg"/>
+      </div>
+     </div>
+    </a>
+    <a class="highlight-box" href="maintenance.html">
+     <div class="highlight-header">
+      Game Favorit
+     </div>
+     <div class="slider-wrapper">
+      <div class="slider">
+       <img alt="Game 1" src="https://wstatic-prod-boc.krafton.com/common/news/20241104/EVOV6Yex.png"/>
+       <img alt="Game 2" src="https://i.ytimg.com/vi/QdUASPN6H0k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBTjah0WFsrB4X27PwWBBOS0XkkVg"/>
+       <img alt="Game 3" src="https://bleedingcool.com/wp-content/uploads/2024/09/PUBG-Mobile-3.4-Event-2000x1125.jpg"/>
+      </div>
+     </div>
+    </a>
+    <a class="highlight-box" href="maintenance.html">
+     <div class="highlight-header">
+      Maps Favorit
+     </div>
+     <div class="slider-wrapper">
+      <div class="slider">
+       <img alt="Maps 1" src="https://blog.unipin.com/wp-content/uploads/2024/01/jenis-senjata-shotgun-terbaik-di-map-Livik-PUBG.jpg"/>
+       <img alt="Maps 2" src="https://media.sportstiger.com/media/pubg-mobile-37-update-download-3-1741322941946-large.webp"/>
+       <img alt="Maps 3" src="https://nnc-media.netralnews.com/IMG-Netral-News-Admin-41-QF1WBTA8ZD.jpg"/>
+      </div>
+     </div>
+    </a>
+   </div>
+   <div class="promo-section">
+    <h2 class="promo-title">
+     PUBG Mobile - EVENT BERLANGSUNG
+    </h2>
+    <!-- Slider main container -->
+    <div class="swiper">
+     <!-- Additional required wrapper -->
+     <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide">
+       <a href="maintenance.html">
+        <img alt="Godzilla" src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg"/>
        </a>
-<a class="register-btn" href="maintenance.html">
-        Registrasi
+       <div class="slide-caption">
+        Awaken The Mighty
+       </div>
+      </div>
+      <div class="swiper-slide">
+       <a href="maintenance.html">
+        <img alt="Pmgo" src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg"/>
        </a>
-</div>
-<div class="forgot-password">
-<a href="#" onclick="alert('Fitur lupa kata sandi belum tersedia.')">
-        Lupa Kata Sandi?
+       <div class="slide-caption">
+        2025 Pmgo
+       </div>
+      </div>
+      <div class="swiper-slide">
+       <a href="maintenance.html">
+        <img alt="New Years" src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large"/>
        </a>
-</div>
-<div class="navbar-right">
-<div class="menu">
-<ul class="navbar-menu">
-<li>
-<a href="maintenance.html">
-           Beranda
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Tentang
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Kontak
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Katalog
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Event
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Champion
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Clan
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Trophy
-          </a>
-</li>
-<li>
-<a href="maintenance.html">
-           Incoming
-          </a>
-</li>
-</ul>
-</div>
-</div>
-</header>
-</div>
-<header class="hero-header">
-<div class="swiper">
-<div class="swiper-wrapper">
-<div class="swiper-slide">
-<img alt="Slide 1" src="https://egw.news/_next/image?url=https%3A%2F%2Fegw.news%2Fuploads%2Fnews%2F1%2F17%2F1741521196064_1741521196065.webp&amp;w=1920&amp;q=75"/>
-</div>
-<div class="swiper-slide">
-<img alt="Slide 2" src="https://pbs.twimg.com/media/FOvnaJgXIAA2w1x.jpg:large"/>
-</div>
-<div class="swiper-slide">
-<img alt="Slide 3" src="https://sg-pubgmobile.playerinfinite.com/cms/nrft/doc/parse/0542e630-cd5c-438b-ae48-194f0cb283ff_html_d111904c235f364d-1769x1063-ori_s_80_50_ori_q_80.webp"/>
-</div>
-</div>
-</div>
-</header>
-<div class="jackpot-container">
-<div class="jackpot-label">PROGRESSIVE JACKPOT</div>
-<div class="jackpot-amount" id="jackpot">IDR 0</div>
-</div>
-<div class="widget-container">
-<a class="widget-link" href="maintenance.html">
-<div class="widget-box">
-<img alt="maintenance.html" src="https://bleedingcool.com/wp-content/uploads/2022/11/PUBG-Mobile-Version-2.3-2-900x900.jpg"/>
-<div class="widget-title">SPORTSBOOK</div>
-</div>
-</a>
-<a class="widget-link" href="maintenance.html">
-<div class="widget-box">
-<img alt="Slot" src="https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/cc1fca0c-f6c3-4941-9a57-91e50e389cb1/b35d0c8d-61f4-4c00-9af5-dfb68d27ebde.png"/>
-<div class="widget-title">SLOT</div>
-</div>
-</a>
-<a class="widget-link" href="maintenance.html">
-<div class="widget-box">
-<img alt="Casino" src="https://i.pinimg.com/474x/9d/43/eb/9d43ebafdb60fbff41dd715d3bb19bbf.jpg"/>
-<div class="widget-title">CASINO</div>
-</div>
-</a>
-<a class="widget-link" href="maintenance.html">
-<div class="widget-box">
-<img alt="Lottery" src="https://pbs.twimg.com/media/GBoGrISW0AEyorG.jpg"/>
-<div class="widget-title">LOTTERY</div>
-</div>
-</a>
-<a class="widget-link" href="maintenance.html">
-<div class="widget-box">
-<img alt="Download" src="https://wallpapers.com/images/hd/p-u-b-g-gamers-logo-flame-background-6c93am8saafkcnjo.jpg"/>
-<div class="widget-title">DOWNLOAD</div>
-</div>
-</a>
-</div>
-<div class="highlight-container">
-<a class="highlight-box" href="maintenance.html">
-<div class="highlight-header">New Comming</div>
-<div class="slider-wrapper">
-<div class="slider">
-<img alt="New 1" src="https://sm.ign.com/ign_in/screenshot/default/screenshot-2023-04-06-144105_8pjq.jpg"/>
-<img alt="New 2" src="https://foto.kontan.co.id/8nrd83Yid9sUfI7bdlWzFowNujQ=/smart/2025/05/08/1680330888p.jpg"/>
-<img alt="New 3" src="https://esportsinsider.com/wp-content/uploads/2025/03/BABYMONSTER.jpg"/>
-</div>
-</div>
-</a>
-<a class="highlight-box" href="maintenance.html">
-<div class="highlight-header">Game Favorit</div>
-<div class="slider-wrapper">
-<div class="slider">
-<img alt="Game 1" src="https://wstatic-prod-boc.krafton.com/common/news/20241104/EVOV6Yex.png"/>
-<img alt="Game 2" src="https://i.ytimg.com/vi/QdUASPN6H0k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBTjah0WFsrB4X27PwWBBOS0XkkVg"/>
-<img alt="Game 3" src="https://bleedingcool.com/wp-content/uploads/2024/09/PUBG-Mobile-3.4-Event-2000x1125.jpg"/>
-</div>
-</div>
-</a>
-<a class="highlight-box" href="maintenance.html">
-<div class="highlight-header">Maps Favorit</div>
-<div class="slider-wrapper">
-<div class="slider">
-<img alt="Maps 1" src="https://blog.unipin.com/wp-content/uploads/2024/01/jenis-senjata-shotgun-terbaik-di-map-Livik-PUBG.jpg"/>
-<img alt="Maps 2" src="https://media.sportstiger.com/media/pubg-mobile-37-update-download-3-1741322941946-large.webp"/>
-<img alt="Maps 3" src="https://nnc-media.netralnews.com/IMG-Netral-News-Admin-41-QF1WBTA8ZD.jpg"/>
-</div>
-</div>
-</a>
-</div>
-<div class="promo-section">
-<h2 class="promo-title">PUBG Mobile - EVENT BERLANGSUNG</h2>
-<!-- Slider main container -->
-<div class="swiper">
-<!-- Additional required wrapper -->
-<div class="swiper-wrapper">
-<!-- Slides -->
-<div class="swiper-slide">
-<a href="maintenance.html"><img alt="Godzilla" src="https://static.invenglobal.com/upload/image/2025/03/28/i1743195011907931.jpeg"/></a>
-<div class="slide-caption">Awaken The Mighty</div>
-</div>
-<div class="swiper-slide">
-<a href="maintenance.html"><img alt="Pmgo" src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2025/01/2025-PUBG-Mobile-Global-Open.jpg"/></a>
-<div class="slide-caption">2025 Pmgo</div>
-</div>
-<div class="swiper-slide">
-<a href="maintenance.html"><img alt="New Years" src="https://pbs.twimg.com/media/GgOeIhmWsAAKBDu.jpg:large"/></a>
-<div class="slide-caption">New Years 2025</div>
-</div>
-<div class="swiper-slide">
-<a href="maintenance.html"><img alt="Alan" src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg"/></a>
-<div class="slide-caption">Alan Walker</div>
-</div>
-<!-- Tambahkan slide lagi jika perlu -->
-</div>
-</div>
-</div>
-<a class="widget-link" href="maintenance.html">
-<div class="slider-container">
-<div class="slider-track" id="slider-track">
-<!-- Diisi lewat JavaScript -->
-</div>
-</div>
-</a>
-<div class="info-section">
-<div class="layanan-member">
-<div class="section-title">
-<img src="https://img.icons8.com/?size=100&amp;id=bY5t0noHcfXn&amp;format=png&amp;color=000000">
-<span>Layanan Member</span>
-</div>
-<div class="info-item">
-<div class="label">Tambah Dana</div>
-<div class="bar"><div class="bar-fill short"></div></div>
-<div class="time-box">1 <span>Menit</span></div>
-</div>
-<div class="info-item">
-<div class="label">WITHDRAW</div>
-<div class="bar"><div class="bar-fill long"></div></div>
-<div class="time-box">3 <span>Menit</span></div>
-</div>
-<div class="info-item">
-<div class="label">LIVECHAT</div>
-<div class="bar"><div class="bar-fill short"></div></div>
-<div class="time-box">1 <span>Menit</span></div>
-</div>
-</div>
-<div class="sistem-pembayaran">
-<div class="section-title">
-<img src="https://img.icons8.com/?size=100&amp;id=117344&amp;format=png&amp;color=000000">
-<span>Sistem Pembayaran</span>
-</div>
-<div class="payment-grid">
-<div><span>🏦 BANK BRI</span> <b class="online">ONLINE</b></div>
-<div><span>🏦 Mandiri</span> <b class="online">ONLINE</b></div>
-<div><span>🏦 CIMB NIAGA</span> <b class="offline">OFFLINE</b></div>
-<div><span>🏦 BANK BNI</span> <b class="online">ONLINE</b></div>
-<div><span>🏦 BANK BCA</span> <b class="online">ONLINE</b></div>
-<div><span>🏦 BANK BSI</span> <b class="online">ONLINE</b></div>
-<div><span>🏦 OTHER BANK</span> <b class="online">ONLINE</b></div>
-<div><span>💰 GOPAY</span> <b class="offline">OFFLINE</b></div>
-<div><span>💰 OVO</span> <b class="offline">OFFLINE</b></div>
-<div><span>💰 LINKAJA</span> <b class="offline">OFFLINE</b></div>
-<div><span>💰 DANA</span> <b class="offline">OFFLINE</b></div>
-<div><span>🛒 Shopee Pay</span> <b class="offline">OFFLINE</b></div>
-<div><span>📶 Telkomsel</span> <b class="online">ONLINE</b></div>
-<div><span>📶 XL</span> <b class="online">ONLINE</b></div>
-</div>
-</div>
-</div>
-
-<div class="info-table-container">
-  <div class="info-table-header">MENGENAI SITUS PUBGSLOT</div>
-  <div class="info-row"><span class="info-label">Minimal Depo</span><span class="info-value">10.000 IDR</span></div>
-  <div class="info-row"><span class="info-label">Minimal WD</span><span class="info-value">50.000 IDR</span></div>
-  <div class="info-row"><span class="info-label">Minimal Bet</span><span class="info-value">200 IDR</span></div>
-  <div class="info-row"><span class="info-label">Layanan Transfer</span><span class="info-value">Transfer Bank, Ewallet, QRIS Payment, Pulsa</span></div>
-  <div class="info-row"><span class="info-label">Provider Slot Rekomendasi</span><span class="info-value">PG Soft, Pragmatic, Habanero, Joker, Spade Gaming, CQ9</span></div>
-</div>
-
-<div class="banner-frame">
-  PUBGSLOT # Situs Link Gacor Kemenangan Tiada Batas
-</div>
-<section class="provider-section">
-<h2 class="section-title">PROVIDER</h2>
-<div class="provider-category">
-<h3 class="provider-header">🎰 SLOT</h3>
-<div class="provider-logos">
-<img alt="prag" src="icons/slot/prag.png">
-<img alt="pgs" src="icons/slot/pgs.png">
-<img alt="5ggames" src="icons/slot/5ggames.png">
-<img alt="advant" src="icons/slot/advant.png">
-<img alt="afb" src="icons/slot/afb.png">
-<img alt="besoft" src="icons/slot/besoft.png">
-<img alt="cq9" src="icons/slot/cq9.png">
-<img alt="fachai" src="icons/slot/fachai.png">
-<img alt="fastspin" src="icons/slot/fastspin.png">
-<img alt="fatpanda" src="icons/slot/fatpanda.png">
-<img alt="golden" src="icons/slot/golden.png">
-<img alt="habanero" src="icons/slot/habanero.png">
-<img alt="hydako" src="icons/slot/hydako.png">
-<img alt="hgs" src="icons/slot/hgs.png">
-<img alt="jdb" src="icons/slot/jdb.png">
-<img alt="jili" src="icons/slot/jili.png">
-<img alt="joker" src="icons/slot/joker.png"/>
-<img alt="micro" src="icons/slot/micro.png"/>
-<img alt="mimi" src="icons/slot/mimi.png"/>
-<img alt="nautilus" src="icons/slot/nautilus.png"/>
-<img alt="nextspin" src="icons/slot/nextspin.png"/>
-<img alt="nolimit" src="icons/slot/nolimit.png"/>
-<img alt="playtech" src="icons/slot/playtech.png"/>
-<img alt="ps" src="icons/slot/ps.png"/>
-<img alt="r88" src="icons/slot/r88.png"/>
-<img alt="redtiger" src="icons/slot/redtiger.png"/>
-<img alt="spade" src="icons/slot/spade.png"/>
-<img alt="vrt" src="icons/slot/vrt.png"/>
-<img alt="ygr" src="icons/slot/ygr.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header">🎲 CASINO</h3>
-<div class="provider-logos">
-<img alt="afb" src="icons/casino/afb.png"/>
-<img alt="alb" src="icons/casino/alb.png"/>
-<img alt="asiagaming" src="icons/casino/asiagaming.png"/>
-<img alt="drg" src="icons/casino/drg.png"/>
-<img alt="evolution" src="icons/casino/evolution.png"/>
-<img alt="gd8" src="icons/casino/gd8.png"/>
-<img alt="lg8" src="icons/casino/lg8.png"/>
-<img alt="ogs" src="icons/casino/ogs.png"/>
-<img alt="playtechlc" src="icons/casino/playtechlc.png"/>
-<img alt="plc" src="icons/casino/plc.png"/>
-<img alt="seg" src="icons/casino/seg.png"/>
-<img alt="wec" src="icons/casino/wec.png"/>
-<img alt="wmc" src="icons/casino/wmc.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header"><img alt="Trophy Icon" height="20" src="icons/sportsbook.png" width="20"/> SPORTSBOOK</h3>
-<div class="provider-logos">
-<img alt="afb" src="icons/sportsbook/afb.png"/>
-<img alt="cmd" src="icons/sportsbook/cmd.png"/>
-<img alt="iae" src="icons/sportsbook/iae.png"/>
-<img alt="m88" src="icons/sportsbook/m88.png"/>
-<img alt="sbo" src="icons/sportsbook/sbo.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header"><img alt="Game Controller Icon" height="20" src="icons/livegame.png" width="20"/> LIVE GAME</h3>
-<div class="provider-logos">
-<img alt="cod" src="icons/livegame/cod.png"/>
-<img alt="ga2" src="icons/livegame/ga2.png"/>
-<img alt="lvg" src="icons/livegame/lvg.png"/>
-<img alt="mki" src="icons/livegame/mki.png"/>
-<img alt="sv3" src="icons/livegame/sv3.png"/>
-<img alt="ws1" src="icons/livegame/ws1.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header"><img alt="Arcade Game Icon" height="20" src="icons/arcade.png" width="20"/> ARCADE</h3>
-<div class="provider-logos">
-<img alt="cq9" src="icons/arcade/cq9.png"/>
-<img alt="hg5" src="icons/arcade/hg5.png"/>
-<img alt="jok" src="icons/arcade/jok.png"/>
-<img alt="spaceman" src="icons/arcade/spaceman.png"/>
-<img alt="spd" src="icons/arcade/spd.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header"><img alt="Lottery Game Icon" height="20" src="icons/lottery.png" width="20"/> LOTTERY</h3>
-<div class="provider-logos">
-<img alt="togel" src="icons/lottery/togel.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<div class="provider-category">
-<h3 class="provider-header"><img alt="Poker Game Icon" height="20" src="icons/poker.png" width="20"/> POKER</h3>
-<div class="provider-logos">
-<img alt="we1" src="icons/poker/we1.png"/>
-<!-- Tambahkan logo lainnya di sini -->
-</div>
-</div>
-<!-- Tambahkan kategori lain seperti SPORTBOOK, ARCADE, dll -->
-</section>
-
-   <img src="images/livechat.png"
-     id="custom-livechat-button"
-     style="
-        position: fixed;
-        bottom: -90px;
-        right: -150px;
-        height: 444px;
-        width: auto;
-        cursor: pointer;
-        z-index: 99999;
-     "
-     alt="Live Chat">
-
-
-</main>
-
-<footer class="site-footer">
-<div class="footer-links">
-<a href="#">+21</a>
-<a href="#">Berita</a>
-<a href="#">Promosi</a>
-<a href="#">Tentang Kami</a>
-<a href="#">Kontak Kami</a>
-<a href="#">Persyaratan &amp; Ketentuan</a>
-<a href="#">FAQ</a>
-</div>
-<p>© KRAFTON 2025 PUBG Mobile.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
-</script>
-<script>
-    const swiper = new Swiper('.swiper', {
+       <div class="slide-caption">
+        New Years 2025
+       </div>
+      </div>
+      <div class="swiper-slide">
+       <a href="maintenance.html">
+        <img alt="Alan" src="https://admin.esports.gg/wp-content/uploads/2025/03/image-1-5-1568x882.jpg"/>
+       </a>
+       <div class="slide-caption">
+        Alan Walker
+       </div>
+      </div>
+      <!-- Tambahkan slide lagi jika perlu -->
+     </div>
+    </div>
+   </div>
+   <a class="widget-link" href="maintenance.html">
+    <div class="slider-container">
+     <div class="slider-track" id="slider-track">
+      <!-- Diisi lewat JavaScript -->
+     </div>
+    </div>
+   </a>
+   <div class="info-section">
+    <div class="layanan-member">
+     <div class="section-title">
+      <img src="https://img.icons8.com/?size=100&amp;id=bY5t0noHcfXn&amp;format=png&amp;color=000000"/>
+      <span>
+       Layanan Member
+      </span>
+     </div>
+     <div class="info-item">
+      <div class="label">
+       Tambah Dana
+      </div>
+      <div class="bar">
+       <div class="bar-fill short">
+       </div>
+      </div>
+      <div class="time-box">
+       1
+       <span>
+        Menit
+       </span>
+      </div>
+     </div>
+     <div class="info-item">
+      <div class="label">
+       WITHDRAW
+      </div>
+      <div class="bar">
+       <div class="bar-fill long">
+       </div>
+      </div>
+      <div class="time-box">
+       3
+       <span>
+        Menit
+       </span>
+      </div>
+     </div>
+     <div class="info-item">
+      <div class="label">
+       LIVECHAT
+      </div>
+      <div class="bar">
+       <div class="bar-fill short">
+       </div>
+      </div>
+      <div class="time-box">
+       1
+       <span>
+        Menit
+       </span>
+      </div>
+     </div>
+    </div>
+    <div class="sistem-pembayaran">
+     <div class="section-title">
+      <img src="https://img.icons8.com/?size=100&amp;id=117344&amp;format=png&amp;color=000000"/>
+      <span>
+       Sistem Pembayaran
+      </span>
+     </div>
+     <div class="payment-grid">
+      <div>
+       <span>
+        🏦 BANK BRI
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 Mandiri
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 CIMB NIAGA
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 BANK BNI
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 BANK BCA
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 BANK BSI
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🏦 OTHER BANK
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        💰 GOPAY
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        💰 OVO
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        💰 LINKAJA
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        💰 DANA
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        🛒 Shopee Pay
+       </span>
+       <b class="offline">
+        OFFLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        📶 Telkomsel
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+      <div>
+       <span>
+        📶 XL
+       </span>
+       <b class="online">
+        ONLINE
+       </b>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="info-table-container">
+    <div class="info-table-header">
+     MENGENAI SITUS PUBGSLOT
+    </div>
+    <div class="info-row">
+     <span class="info-label">
+      Minimal Depo
+     </span>
+     <span class="info-value">
+      10.000 IDR
+     </span>
+    </div>
+    <div class="info-row">
+     <span class="info-label">
+      Minimal WD
+     </span>
+     <span class="info-value">
+      50.000 IDR
+     </span>
+    </div>
+    <div class="info-row">
+     <span class="info-label">
+      Minimal Bet
+     </span>
+     <span class="info-value">
+      200 IDR
+     </span>
+    </div>
+    <div class="info-row">
+     <span class="info-label">
+      Layanan Transfer
+     </span>
+     <span class="info-value">
+      Transfer Bank, Ewallet, QRIS Payment, Pulsa
+     </span>
+    </div>
+    <div class="info-row">
+     <span class="info-label">
+      Provider Slot Rekomendasi
+     </span>
+     <span class="info-value">
+      PG Soft, Pragmatic, Habanero, Joker, Spade Gaming, CQ9
+     </span>
+    </div>
+   </div>
+   <div class="banner-frame">
+    PUBGSLOT # Situs Link Gacor Kemenangan Tiada Batas
+   </div>
+   <section class="provider-section">
+    <h2 class="section-title">
+     PROVIDER
+    </h2>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      🎰 SLOT
+     </h3>
+     <div class="provider-logos">
+      <img alt="prag" src="icons/slot/prag.png"/>
+      <img alt="pgs" src="icons/slot/pgs.png"/>
+      <img alt="5ggames" src="icons/slot/5ggames.png"/>
+      <img alt="advant" src="icons/slot/advant.png"/>
+      <img alt="afb" src="icons/slot/afb.png"/>
+      <img alt="besoft" src="icons/slot/besoft.png"/>
+      <img alt="cq9" src="icons/slot/cq9.png"/>
+      <img alt="fachai" src="icons/slot/fachai.png"/>
+      <img alt="fastspin" src="icons/slot/fastspin.png"/>
+      <img alt="fatpanda" src="icons/slot/fatpanda.png"/>
+      <img alt="golden" src="icons/slot/golden.png"/>
+      <img alt="habanero" src="icons/slot/habanero.png"/>
+      <img alt="hydako" src="icons/slot/hydako.png"/>
+      <img alt="hgs" src="icons/slot/hgs.png"/>
+      <img alt="jdb" src="icons/slot/jdb.png"/>
+      <img alt="jili" src="icons/slot/jili.png"/>
+      <img alt="joker" src="icons/slot/joker.png">
+       <img alt="micro" src="icons/slot/micro.png">
+        <img alt="mimi" src="icons/slot/mimi.png">
+         <img alt="nautilus" src="icons/slot/nautilus.png">
+          <img alt="nextspin" src="icons/slot/nextspin.png">
+           <img alt="nolimit" src="icons/slot/nolimit.png">
+            <img alt="playtech" src="icons/slot/playtech.png">
+             <img alt="ps" src="icons/slot/ps.png">
+              <img alt="r88" src="icons/slot/r88.png">
+               <img alt="redtiger" src="icons/slot/redtiger.png">
+                <img alt="spade" src="icons/slot/spade.png">
+                 <img alt="vrt" src="icons/slot/vrt.png">
+                  <img alt="ygr" src="icons/slot/ygr.png">
+                   <!-- Tambahkan logo lainnya di sini -->
+                  </img>
+                 </img>
+                </img>
+               </img>
+              </img>
+             </img>
+            </img>
+           </img>
+          </img>
+         </img>
+        </img>
+       </img>
+      </img>
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      🎲 CASINO
+     </h3>
+     <div class="provider-logos">
+      <img alt="afb" src="icons/casino/afb.png">
+       <img alt="alb" src="icons/casino/alb.png">
+        <img alt="asiagaming" src="icons/casino/asiagaming.png">
+         <img alt="drg" src="icons/casino/drg.png">
+          <img alt="evolution" src="icons/casino/evolution.png">
+           <img alt="gd8" src="icons/casino/gd8.png"/>
+           <img alt="lg8" src="icons/casino/lg8.png"/>
+           <img alt="ogs" src="icons/casino/ogs.png"/>
+           <img alt="playtechlc" src="icons/casino/playtechlc.png"/>
+           <img alt="plc" src="icons/casino/plc.png"/>
+           <img alt="seg" src="icons/casino/seg.png"/>
+           <img alt="wec" src="icons/casino/wec.png"/>
+           <img alt="wmc" src="icons/casino/wmc.png"/>
+           <!-- Tambahkan logo lainnya di sini -->
+          </img>
+         </img>
+        </img>
+       </img>
+      </img>
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      <img alt="Trophy Icon" height="20" src="icons/sportsbook.png" width="20"/>
+      SPORTSBOOK
+     </h3>
+     <div class="provider-logos">
+      <img alt="afb" src="icons/sportsbook/afb.png"/>
+      <img alt="cmd" src="icons/sportsbook/cmd.png"/>
+      <img alt="iae" src="icons/sportsbook/iae.png"/>
+      <img alt="m88" src="icons/sportsbook/m88.png"/>
+      <img alt="sbo" src="icons/sportsbook/sbo.png"/>
+      <!-- Tambahkan logo lainnya di sini -->
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      <img alt="Game Controller Icon" height="20" src="icons/livegame.png" width="20"/>
+      LIVE GAME
+     </h3>
+     <div class="provider-logos">
+      <img alt="cod" src="icons/livegame/cod.png"/>
+      <img alt="ga2" src="icons/livegame/ga2.png"/>
+      <img alt="lvg" src="icons/livegame/lvg.png"/>
+      <img alt="mki" src="icons/livegame/mki.png"/>
+      <img alt="sv3" src="icons/livegame/sv3.png"/>
+      <img alt="ws1" src="icons/livegame/ws1.png"/>
+      <!-- Tambahkan logo lainnya di sini -->
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      <img alt="Arcade Game Icon" height="20" src="icons/arcade.png" width="20"/>
+      ARCADE
+     </h3>
+     <div class="provider-logos">
+      <img alt="cq9" src="icons/arcade/cq9.png"/>
+      <img alt="hg5" src="icons/arcade/hg5.png"/>
+      <img alt="jok" src="icons/arcade/jok.png"/>
+      <img alt="spaceman" src="icons/arcade/spaceman.png"/>
+      <img alt="spd" src="icons/arcade/spd.png"/>
+      <!-- Tambahkan logo lainnya di sini -->
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      <img alt="Lottery Game Icon" height="20" src="icons/lottery.png" width="20"/>
+      LOTTERY
+     </h3>
+     <div class="provider-logos">
+      <img alt="togel" src="icons/lottery/togel.png"/>
+      <!-- Tambahkan logo lainnya di sini -->
+     </div>
+    </div>
+    <div class="provider-category">
+     <h3 class="provider-header">
+      <img alt="Poker Game Icon" height="20" src="icons/poker.png" width="20"/>
+      POKER
+     </h3>
+     <div class="provider-logos">
+      <img alt="we1" src="icons/poker/we1.png"/>
+      <!-- Tambahkan logo lainnya di sini -->
+     </div>
+    </div>
+    <!-- Tambahkan kategori lain seperti SPORTBOOK, ARCADE, dll -->
+   </section>
+   <img alt="Live Chat" id="custom-livechat-button" src="images/livechat.png"/>
+  </main>
+  <footer class="site-footer">
+   <div class="footer-links">
+    <a href="#">
+     +21
+    </a>
+    <a href="#">
+     Berita
+    </a>
+    <a href="#">
+     Promosi
+    </a>
+    <a href="#">
+     Tentang Kami
+    </a>
+    <a href="#">
+     Kontak Kami
+    </a>
+    <a href="#">
+     Persyaratan &amp; Ketentuan
+    </a>
+    <a href="#">
+     FAQ
+    </a>
+   </div>
+   <p>
+    © KRAFTON 2025 PUBG Mobile.
+   </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+  </script>
+  <script>
+   const swiper = new Swiper('.swiper', {
     loop: true,
     autoplay: {
       delay: 5000,
@@ -441,10 +684,9 @@
     grabCursor: true,
     effect: 'slide',
   });
-   </script>
-
-<script>
-function toggleMenu() {
+  </script>
+  <script>
+   function toggleMenu() {
   const menu = document.querySelector("ul.navbar-menu");
   menu.classList.toggle("show");
 }
@@ -452,26 +694,25 @@ const toggleBtn = document.querySelector(".menu-toggle");
 if (toggleBtn) {
   toggleBtn.addEventListener("click", toggleMenu);
 }
-</script>
-<script>
-  document.addEventListener("contextmenu", event => event.preventDefault());
-</script>
-<script>
-  document.onkeydown = function(e) {
+  </script>
+  <script>
+   document.addEventListener("contextmenu", event => event.preventDefault());
+  </script>
+  <script>
+   document.onkeydown = function(e) {
     if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) return false;
     if (e.key === 'F12') return false;
   };
-</script>
-<script>
-  document.addEventListener("keydown", function(e) {
+  </script>
+  <script>
+   document.addEventListener("keydown", function(e) {
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
       e.preventDefault();
     }
   });
-</script>
-
-<script>
-function updateClock() {
+  </script>
+  <script>
+   function updateClock() {
       const now = new Date();
       const wibTime = new Date(now.getTime() + (7 * 60 * 60 * 1000));
       const hours = String(wibTime.getUTCHours()).padStart(2, '0');
@@ -487,10 +728,9 @@ function updateClock() {
     }
     setInterval(updateClock, 1000);
     updateClock();
-    </script>
-    
-<script>
-    // Animasi naik angka
+  </script>
+  <script>
+   // Animasi naik angka
     const jackpotEl = document.getElementById('jackpot');
     let current = 39094433486; // nilai awal
     let increment = 137; // nilai pertambahan tiap update
@@ -506,11 +746,12 @@ function updateClock() {
 
     setInterval(updateJackpot, 100); // update setiap 100ms
   </script>
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- Init Swiper -->
-<script>
-    const swiper = new Swiper('.swiper', {
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+  </script>
+  <!-- Init Swiper -->
+  <script>
+   const swiper = new Swiper('.swiper', {
       loop: true,
       autoplay: {
         delay: 3000,
@@ -536,8 +777,8 @@ function updateClock() {
       },
     });
   </script>
-<script>
-    const data = [
+  <script>
+   const data = [
       { title: "Seoul", number: "1572", daysAgo: 0 },
       { title: "Timor", number: "3056", daysAgo: 0 },
       { title: "SiberiaPools", number: "3829", daysAgo: 1 },
@@ -597,17 +838,16 @@ function updateClock() {
       });
     }
   </script>
-
-<!-- Start of LiveChat (www.livechat.com) code -->
-<script>
-  window.__lc = window.__lc || {};
+  <!-- Start of LiveChat (www.livechat.com) code -->
+  <script>
+   window.__lc = window.__lc || {};
   window.__lc.license = 19168575;
   window.__lc.integration_name = "manual_onboarding";
   window.__lc.product_name = "livechat";
   window.__lc.asyncInit = true; // agar tidak langsung aktif
-</script>
-<script>
-  (function(n,t,c){
+  </script>
+  <script>
+   (function(n,t,c){
     function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}
     var e={_q:[],_h:null,_v:"2.0",
       on:function(){i(["on",c.call(arguments)])},
@@ -625,12 +865,11 @@ function updateClock() {
     };
     n.LiveChatWidget = n.LiveChatWidget || e;
   })(window,document,[].slice);
-</script>
-<!-- End of LiveChat code -->
-
-<!-- Tombol custom trigger -->
-<script>
-  window.addEventListener("DOMContentLoaded", function () {
+  </script>
+  <!-- End of LiveChat code -->
+  <!-- Tombol custom trigger -->
+  <script>
+   window.addEventListener("DOMContentLoaded", function () {
     const customChatBtn = document.getElementById('custom-livechat-button');
 
     if (customChatBtn) {
@@ -647,11 +886,9 @@ function updateClock() {
       });
     }
   });
-</script>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+  </script>
+  <script>
+   document.addEventListener("DOMContentLoaded", function () {
   const container = document.querySelector('.jackpot-container');
   for (let i = 0; i < 15; i++) {
     const coin = document.createElement('div');
@@ -662,11 +899,10 @@ document.addEventListener("DOMContentLoaded", function () {
     container.appendChild(coin);
   }
 });
-</script>
-
-<!-- Script animasi jackpot -->
-<script>
-function animateJackpot(start, end, duration) {
+  </script>
+  <!-- Script animasi jackpot -->
+  <script>
+   function animateJackpot(start, end, duration) {
   const jackpotElement = document.getElementById('jackpot');
   let startTime = null;
 
@@ -697,7 +933,6 @@ setInterval(() => {
   animateJackpot(currentJackpot, nextJackpot, 1500);
   currentJackpot = nextJackpot;
 }, 5000);
-</script>
-
-</body>
+  </script>
+ </body>
 </html>
