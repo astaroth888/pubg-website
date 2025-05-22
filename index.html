@@ -1019,6 +1019,20 @@ main {
 </head>
 <body>
 
+   <!-- Burger menu (tampilkan hanya di mobile) -->
+<div class="menu-burger" onclick="toggleMenu()">☰</div>
+
+<!-- Login Form (hanya muncul saat menu burger ditekan) -->
+<div id="mobile-menu" class="mobile-login hidden">
+  <form class="login-form">
+    <input type="text" placeholder="Username" />
+    <input type="password" placeholder="Password" />
+    <button type="submit">Login</button>
+    <button type="button">Registrasi</button>
+    <a href="#">Lupa Kata Sandi?</a>
+  </form>
+</div>
+
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
 <div class="top-container">
@@ -1692,6 +1706,13 @@ setInterval(() => {
   animateJackpot(currentJackpot, nextJackpot, 1500);
   currentJackpot = nextJackpot;
 }, 5000);
+</script>
+
+   <script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  }
 </script>
 
 </body>
