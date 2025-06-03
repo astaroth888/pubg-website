@@ -19,7 +19,8 @@
 <meta content="website" property="og:type"/>
 <link href="https://www.memanjakandiri.xyz/" rel="canonical">
 <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet"/>
-<link href="main.css" rel="stylesheet"/>
+<link href="responsive-fixes.css" rel="stylesheet"/>
+<link href="style-final.css" rel="stylesheet"/>
 
 <style>
   img, video {
@@ -994,59 +995,6 @@ main {
     padding: 1rem !important;
   }
 }
-
-   /* Umum */
-.menu-burger {
-  font-size: 24px;
-  cursor: pointer;
-  padding: 10px;
-  background: #222;
-  color: white;
-  display: none; /* default: sembunyi */
-}
-
-.mobile-login {
-  background: #111;
-  padding: 15px;
-  margin-top: 10px;
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.login-form input,
-.login-form button {
-  padding: 8px;
-  border-radius: 4px;
-  border: none;
-}
-
-.login-form input {
-  background: #333;
-  color: white;
-}
-
-.login-form button {
-  background: #f1c40f;
-  color: black;
-  font-weight: bold;
-}
-
-/* Responsif: Tampilkan burger hanya di mobile */
-@media (max-width: 767px) {
-  .menu-burger {
-    display: block;
-  }
-}
-
-/* Sembunyikan dengan class 'hidden' */
-.hidden {
-  display: none !important;
-}
-
 </style>
 
 
@@ -1071,20 +1019,6 @@ main {
 
 </head>
 <body>
-
-   <!-- Burger menu (tampilkan hanya di mobile) -->
-<div class="menu-burger" onclick="toggleMenu()">☰</div>
-
-<!-- Login Form (hanya muncul saat menu burger ditekan) -->
-<div id="mobile-menu" class="mobile-login hidden">
-  <form class="login-form">
-    <input type="text" placeholder="Username" />
-    <input type="password" placeholder="Password" />
-    <button type="submit">Login</button>
-    <button type="button">Registrasi</button>
-    <a href="#">Lupa Kata Sandi?</a>
-  </form>
-</div>
 
 <main style="padding: 20px; display: flex; flex-direction: column; gap: 1.5rem;">
 <div class="sticky-header">
@@ -1505,32 +1439,6 @@ main {
   });
    </script>
 
-<script>
-function toggleMenu() {
-  const menu = document.querySelector("ul.navbar-menu");
-  menu.classList.toggle("show");
-}
-const toggleBtn = document.querySelector(".menu-toggle");
-if (toggleBtn) {
-  toggleBtn.addEventListener("click", toggleMenu);
-}
-</script>
-<script>
-  document.addEventListener("contextmenu", event => event.preventDefault());
-</script>
-<script>
-  document.onkeydown = function(e) {
-    if (e.ctrlKey && (e.key === 'u' || e.key === 's' || e.key === 'c')) return false;
-    if (e.key === 'F12') return false;
-  };
-</script>
-<script>
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-      e.preventDefault();
-    }
-  });
-</script>
 
 <script>
 function updateClock() {
@@ -1759,13 +1667,6 @@ setInterval(() => {
   animateJackpot(currentJackpot, nextJackpot, 1500);
   currentJackpot = nextJackpot;
 }, 5000);
-</script>
-
-   <script>
-  function toggleMenu() {
-    const menu = document.getElementById("mobile-menu");
-    menu.classList.toggle("hidden");
-  }
 </script>
 
 </body>
