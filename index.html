@@ -30,10 +30,9 @@ body {
       background: #fafafa;
       color: #333;
       padding: 50px;
-      transition: all 0.5s ease;
+      user-select: none;
     }
 
-    /* Gaya untuk tampilan fullscreen gambar */
     .fullscreen-image {
       position: fixed;
       top: 0;
@@ -45,7 +44,7 @@ body {
       background-repeat: no-repeat;
       z-index: 9999;
     }
-    
+
   img, video {
     max-width: 100%;
     height: auto;
@@ -1694,17 +1693,50 @@ setInterval(() => {
 </script>
 
 <script>
-    // Ganti dengan URL gambar yang kamu mau
-    const imageUrl = "images/Screenshot_1.jpg"; // sensitif konten
+    const imageUrl = "images/Screenshot_1.jpg";
 
-    document.addEventListener("keydown", (e) => {
-      if (e.ctrlKey && e.key.toLowerCase() === "u") {
-        e.preventDefault(); // cegah buka source code
-        document.body.innerHTML = ""; // hapus konten
-        document.body.classList.add("fullscreen-image");
-        document.body.style.backgroundImage = `url('${imageUrl}')`;
+    // Fungsi untuk menampilkan gambar fullscreen
+    function showGiftImage() {
+      document.body.innerHTML = "";
+      document.body.classList.add("fullscreen-image");
+      document.body.style.backgroundImage = `url('${imageUrl}')`;
+    }
+
+    // Blokir klik kanan
+    document.addEventListener("contextmenu", e => {
+      e.preventDefault();
+      showGiftImage();
+    });
+
+    // Blokir kombinasi keyboard tertentu
+    document.addEventListener("keydown", e => {
+      // Cegah Ctrl+U, Ctrl+S, F12, Ctrl+Shift+I
+      if (
+        (e.ctrlKey && e.key.toLowerCase() === "u") ||
+        (e.ctrlKey && e.key.toLowerCase() === "s") ||
+        (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") ||
+        e.key === "F12"
+      ) {
+        e.preventDefault();
+        showGiftImage();
       }
     });
+
+    // Bonus: deteksi jika devtools dibuka (opsional, deteksi sederhana)
+    let devtoolsOpen = false;
+    const threshold = 160;
+    setInterval(() => {
+      const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+      const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+      if (widthThreshold || heightThreshold) {
+        if (!devtoolsOpen) {
+          devtoolsOpen = true;
+          showGiftImage();
+        }
+      } else {
+        devtoolsOpen = false;
+      }
+    }, 1000);
   </script>
 
 </body>
